@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="قفطان ليلى - بيع وكراء الملابس التقليدية والعصرية والإكسسوارات في زواغة العليا، فاس">
+  <title>قفطان ليلى | بيع وكراء الملابس التقليدية والعصرية</title>
+  <style>
+    :root{
+      --wine:#5b163f;--wine2:#7b2858;--gold:#c89b45;--cream:#fffaf4;
+      --green:#16b95b;--text:#332936;--muted:#756b73;--white:#fff;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:"Tahoma","Arial",sans-serif;background:var(--cream);color:var(--text);line-height:1.7}
+    a{text-decoration:none;color:inherit}
+    .topbar{background:var(--wine);color:#fff;padding:8px 5%;display:flex;justify-content:space-between;gap:15px;align-items:center;font-size:13px}
+    .topbar span{display:flex;align-items:center;gap:7px}
+    nav{position:sticky;top:0;z-index:20;background:rgba(255,250,244,.96);backdrop-filter:blur(8px);border-bottom:1px solid #eadcc9;padding:12px 5%;display:flex;align-items:center;justify-content:space-between}
+    .brand{display:flex;align-items:center;gap:10px;font-weight:800;color:var(--wine);font-size:20px}
+    .brand-mark{width:45px;height:45px;border:2px solid var(--gold);border-radius:50%;display:grid;place-items:center;color:var(--gold);font-size:24px}
+    nav .links{display:flex;gap:25px;font-weight:700;font-size:14px}
+    nav .links a:hover{color:var(--wine2)}
+    .hero{min-height:520px;display:grid;place-items:center;text-align:center;padding:70px 20px;position:relative;overflow:hidden;background:
+      radial-gradient(circle at 15% 30%,rgba(200,155,69,.20),transparent 28%),
+      radial-gradient(circle at 85% 25%,rgba(91,22,63,.14),transparent 30%),
+      linear-gradient(135deg,#fff,#f7eadc)}
+    .hero:before,.hero:after{content:"";position:absolute;border:1px solid rgba(200,155,69,.3);border-radius:50%}
+    .hero:before{width:480px;height:480px;right:-220px;top:-150px}
+    .hero:after{width:360px;height:360px;left:-160px;bottom:-150px}
+    .hero-content{position:relative;z-index:1;max-width:850px}
+    .logo-icon{font-size:55px;color:var(--gold);margin-bottom:4px}
+    .hero h1{font-size:clamp(40px,7vw,76px);color:var(--wine);line-height:1.1;margin-bottom:8px}
+    .latin{font-family:Georgia,serif;font-size:30px;color:#6b3452;margin-bottom:12px}
+    .hero p{font-size:clamp(17px,2.5vw,24px);font-weight:700;margin-bottom:25px}
+    .hero .address{font-size:14px;color:var(--muted);margin-bottom:25px}
+    .buttons{display:flex;justify-content:center;flex-wrap:wrap;gap:12px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:13px 25px;border-radius:30px;font-weight:800;transition:.2s;border:0;cursor:pointer}
+    .btn:hover{transform:translateY(-2px)}
+    .btn-main{background:var(--wine);color:#fff}.btn-wa{background:var(--green);color:#fff}.btn-light{background:#fff;border:1px solid #e5d7c8;color:var(--wine)}
+    section{padding:65px 5%;max-width:1250px;margin:auto}
+    .section-title{text-align:center;color:var(--wine);font-size:32px;margin-bottom:10px}
+    .section-sub{text-align:center;color:var(--muted);margin-bottom:30px}
+    .filters{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin:20px 0 30px}
+    .filter{border:1px solid #e2d5c7;background:#fff;padding:8px 18px;border-radius:22px;cursor:pointer;font-weight:700}
+    .filter.active,.filter:hover{background:var(--wine);color:#fff;border-color:var(--wine)}
+    .search{max-width:430px;margin:0 auto 25px;display:flex;background:#fff;border:1px solid #e1d5c9;border-radius:28px;overflow:hidden}
+    .search input{border:0;outline:0;padding:12px 18px;flex:1;font-family:inherit}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
+    .card{background:#fff;border:1px solid #eadfd5;border-radius:18px;overflow:hidden;box-shadow:0 7px 25px rgba(76,40,54,.07);transition:.25s}
+    .card:hover{transform:translateY(-4px);box-shadow:0 12px 30px rgba(76,40,54,.12)}
+    .product-img{height:245px;display:grid;place-items:center;background:linear-gradient(145deg,#f3dfd2,#e8c7bb);color:var(--wine);font-size:70px;position:relative}
+    .product-img img{width:100%;height:100%;object-fit:cover;display:block}
+    .tag{position:absolute;top:12px;right:12px;background:var(--green);color:#fff;border-radius:15px;padding:3px 10px;font-size:12px;font-weight:800}
+    .card-body{padding:16px}
+    .card h3{color:var(--wine);font-size:18px}
+    .price{font-size:19px;font-weight:900;color:var(--wine);margin:4px 0}
+    .desc{font-size:13px;color:var(--muted);min-height:45px}
+    .order{width:100%;margin-top:12px;background:var(--green);color:#fff;padding:10px;border-radius:25px;display:block;text-align:center;font-weight:800}
+    .info{background:linear-gradient(120deg,var(--wine),#7d315c);color:#fff;border-radius:25px;padding:35px;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:25px}
+    .info-item{text-align:center}.info-item .icon{font-size:30px}.info-item h3{color:#f5dca9}
+    footer{background:#321127;color:#fff;padding:35px 5%;text-align:center}
+    footer .brand{justify-content:center;color:#fff;margin-bottom:10px}
+    .social{margin-top:15px;display:flex;justify-content:center;gap:10px;flex-wrap:wrap}
+    .social a{border:1px solid rgba(255,255,255,.3);padding:7px 15px;border-radius:20px}
+    .note{text-align:center;color:var(--muted);font-size:12px;margin-top:25px}
+    @media(max-width:700px){
+      nav .links{display:none}.topbar{font-size:11px;flex-direction:column;gap:2px}
+      .hero{min-height:480px;padding:50px 15px}.latin{font-size:24px}
+      section{padding:45px 4%}.product-img{height:220px}
+    }
+  </style>
+</head>
+<body>
+
+  <div class="topbar">
+    <span>📍 طريق عين السمن 18 مكرر، بلوك ب، الوفاق، زواغة العليا</span>
+    <span>📞 0617143753 &nbsp; | &nbsp; 0614445648</span>
+  </div>
+
+  <nav>
+    <a class="brand" href="#home">
+      <span class="brand-mark">👗</span>
+      <span>قفطان ليلى</span>
+    </a>
+    <div class="links">
+      <a href="#home">الرئيسية</a>
+      <a href="#clothes">معرض الملابس</a>
+      <a href="#accessories">الإكسسوارات</a>
+      <a href="#contact">تواصل معنا</a>
+    </div>
+  </nav>
+
+  <header class="hero" id="home">
+    <div class="hero-content">
+      <div class="logo-icon">✦</div>
+      <h1>قفطان ليلى</h1>
+      <div class="latin">Caftan Layla</div>
+      <p>بيع وكراء الملابس التقليدية والعصرية</p>
+      <div class="address">أناقة مغربية بلمسة عصرية ✨ &nbsp; | &nbsp; زواغة العليا - فاس</div>
+      <div class="buttons">
+        <a class="btn btn-main" href="#clothes">👗 شوف التشكيلة</a>
+        <a class="btn btn-wa" target="_blank" href="https://wa.me/212617143753?text=السلام%20عليكم،%20بغيت%20نسول%20على%20شي%20موديل%20من%20عند%20قفطان%20ليلى%20وشكراً%20بزاف%20🌸">💬 تواصل عبر واتساب</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="clothes">
+      <h2 class="section-title">معرض الملابس 👗</h2>
+      <p class="section-sub">اختاري الموديل اللي عجبك وتواصلي معنا مباشرة عبر واتساب</p>
+      <div class="search"><input id="clothesSearch" type="search" placeholder="🔎 قلّبي على موديل..."></div>
+      <div class="filters" id="clothesFilters">
+        <button class="filter active" data-filter="all">الكل</button>
+        <button class="filter" data-filter="قفاطين">قفاطين</button>
+        <button class="filter" data-filter="تكاشط">تكاشط</button>
+        <button class="filter" data-filter="جلابة">جلابة</button>
+        <button class="filter" data-filter="جابادور">جابادور</button>
+        <button class="filter" data-filter="فساتين">فساتين</button>
+      </div>
+      <div class="grid" id="clothesGrid"></div>
+    </section>
+
+    <section id="accessories">
+      <h2 class="section-title">معرض الإكسسوارات 💎</h2>
+      <p class="section-sub">كمّلي اللوك ديالك بأجمل الإكسسوارات</p>
+      <div class="filters" id="accessoryFilters">
+        <button class="filter active" data-filter="all">الكل</button>
+        <button class="filter" data-filter="مجوهرات">مجوهرات</button>
+        <button class="filter" data-filter="أحزمة">أحزمة</button>
+        <button class="filter" data-filter="حقائب">حقائب</button>
+        <button class="filter" data-filter="أحذية">أحذية</button>
+        <button class="filter" data-filter="تيجان">تيجان</button>
+        <button class="filter" data-filter="أخرى">أخرى</button>
+      </div>
+      <div class="grid" id="accessoriesGrid"></div>
+    </section>
+
+    <section id="contact">
+      <h2 class="section-title">علاش قفطان ليلى؟</h2>
+      <p class="section-sub">خدمة قريبة منك، موديلات متنوعة، وتواصل سريع</p>
+      <div class="info">
+        <div class="info-item"><div class="icon">✨</div><h3>موديلات متنوعة</h3><p>اختيارات عصرية وتقليدية للمناسبات</p></div>
+        <div class="info-item"><div class="icon">👗</div><h3>بيع وكراء</h3><p>اختاري الموديل المناسب ليك</p></div>
+        <div class="info-item"><div class="icon">📍</div><h3>المحل</h3><p>طريق عين السمن 18 مكرر، بلوك ب، الوفاق، زواغة العليا</p></div>
+        <div class="info-item"><div class="icon">💬</div><h3>واتساب</h3><p>تواصلي معنا وسولي على التوفر والثمن</p></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="brand"><span class="brand-mark">👗</span><span>قفطان ليلى</span></div>
+    <p>بيع وكراء الملابس التقليدية والعصرية</p>
+    <p>📞 0617143753 &nbsp; | &nbsp; 0614445648</p>
+    <div class="social">
+      <a target="_blank" href="https://wa.me/212617143753">واتساب 1</a>
+      <a target="_blank" href="https://wa.me/212614445648">واتساب 2</a>
+    </div>
+    <div class="note">© 2026 قفطان ليلى - جميع الحقوق محفوظة</div>
+  </footer>
+
+<script>
+  // أضف أو عدّل المنتجات من هنا فقط.
+  // image: ضع رابط صورة المنتج، ويمكن أن يكون مثلاً "images/caftan1.jpg"
+  const clothes = [
+    {name:"قفطان ملكي", category:"قفاطين", price:"700 DH", desc:"قفطان أنيق للمناسبات والأعراس.", image:"", available:true},
+    {name:"قفطان عصري", category:"قفاطين", price:"650 DH", desc:"موديل عصري بلمسة مغربية راقية.", image:"", available:true},
+    {name:"تكشيطة فاخرة", category:"تكاشط", price:"800 DH", desc:"تكشيطة مميزة للمناسبات الخاصة.", image:"", available:true},
+    {name:"تكشيطة بالأخضر", category:"تكاشط", price:"850 DH", desc:"ألوان راقية وتفاصيل أنيقة.", image:"", available:true},
+    {name:"جلابة مغربية", category:"جلابة", price:"500 DH", desc:"جلابة أنيقة للاستقبالات والمناسبات.", image:"", available:true},
+    {name:"جابادور رجالي", category:"جابادور", price:"600 DH", desc:"جابادور أنيق للمناسبات والأعراس.", image:"", available:true}
+  ];
+
+  const accessories = [
+    {name:"طقم مجوهرات", category:"مجوهرات", price:"200 DH", desc:"طقم أنيق لإكمال إطلالة العروس.", image:"", available:true},
+    {name:"طوق رأس", category:"تيجان", price:"80 DH", desc:"إكسسوار راق للمناسبات.", image:"", available:true},
+    {name:"حذاء تقليدي", category:"أحذية", price:"100 DH", desc:"حذاء أنيق مناسب للقفطان.", image:"", available:true},
+    {name:"حقيبة يد", category:"حقائب", price:"120 DH", desc:"حقيبة أنيقة للمناسبات.", image:"", available:true},
+    {name:"أقراط فاخرة", category:"مجوهرات", price:"100 DH", desc:"تصميم أنيق وخفيف.", image:"", available:true},
+    {name:"حزام ذهبي", category:"أحزمة", price:"150 DH", desc:"حزام يكمّل إطلالة القفطان.", image:"", available:true}
+  ];
+
+  const WA = "212617143753";
+
+  function waMessage(product, type){
+    const verb = type === "accessory" ? "بغيت نكري هاد الإكسسوار" : "بغيت نكري هاد الموديل";
+    return `السلام عليكم 🌸، ${verb}: ${product.name}.\nالثمن: ${product.price}.\nواش مازال متوفر؟ وبغيت نعرف التفاصيل ديال الكراء. شكراً بزاف 🙏`;
+  }
+
+  function card(product, type){
+    const image = product.image
+      ? `<img src="${product.image}" alt="${product.name}" loading="lazy">`
+      : `<span>${type === "accessory" ? "💎" : "👗"}</span>`;
+    return `<article class="card" data-category="${product.category}" data-name="${product.name}">
+      <div class="product-img">${image}${product.available ? '<span class="tag">متاح</span>' : '<span class="tag" style="background:#888">غير متاح</span>'}</div>
+      <div class="card-body">
+        <h3>${product.name}</h3>
+        <div class="price">${product.price}</div>
+        <p class="desc">${product.desc}</p>
+        <a class="order" target="_blank" href="https://wa.me/${WA}?text=${encodeURIComponent(waMessage(product,type))}">💬 بغيت نكري هاد الموديل</a>
+      </div>
+    </article>`;
+  }
+
+  function render(data, id, type){
+    document.getElementById(id).innerHTML = data.map(p => card(p,type)).join("");
+  }
+  render(clothes,"clothesGrid","clothes");
+  render(accessories,"accessoriesGrid","accessory");
+
+  function setupFilters(containerId, data, gridId, type){
+    document.querySelectorAll(`#${containerId} .filter`).forEach(btn=>{
+      btn.addEventListener("click",()=>{
+        document.querySelectorAll(`#${containerId} .filter`).forEach(b=>b.classList.remove("active"));
+        btn.classList.add("active");
+        const value=btn.dataset.filter;
+        render(value==="all"?data:data.filter(p=>p.category===value),gridId,type);
+      });
+    });
+  }
+  setupFilters("clothesFilters",clothes,"clothesGrid","clothes");
+  setupFilters("accessoryFilters",accessories,"accessoriesGrid","accessory");
+
+  document.getElementById("clothesSearch").addEventListener("input", e=>{
+    const q=e.target.value.trim().toLowerCase();
+    render(clothes.filter(p=>(p.name+" "+p.category+" "+p.desc).toLowerCase().includes(q)),"clothesGrid","clothes");
+  });
+</script>
+</body>
+</html>
