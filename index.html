@@ -7,40 +7,28 @@
 <meta charset="UTF-8">
 
 <meta name="viewport"
-      content="width=device-width, initial-scale=1.0">
+content="width=device-width, initial-scale=1.0">
 
 <meta name="description"
-      content="قفطان ليلى - بيع وكراء القفاطين والتكاشط والجلابة والجابادور والإكسسوارات المغربية في زواغة العليا، فاس">
+content="قفطان ليلى - بيع وكراء القفاطين والتكاشط والجلابة المغربية والإكسسوارات في زواغة العليا، فاس">
 
 <title>قفطان ليلى | Caftan Layla</title>
 
 <style>
 
-/* =====================================================
-   الهوية البصرية
-   ===================================================== */
-
 :root{
-  --wine:#4d1235;
-  --wine-dark:#300b21;
-  --wine2:#751e4f;
-
-  --gold:#c9a34e;
-  --gold-light:#ead28d;
-
+  --wine:#4b102f;
+  --wine-dark:#2d081d;
+  --wine2:#741e4d;
+  --gold:#c8a04b;
+  --gold-light:#ecd38f;
   --cream:#fffaf4;
-  --cream2:#f7eee3;
-
-  --green:#16b957;
-
+  --cream2:#f6ede3;
+  --green:#18b957;
   --text:#30242b;
-  --muted:#776b72;
-
+  --muted:#766b72;
   --white:#fff;
 }
-
-
-/* RESET */
 
 *{
   box-sizing:border-box;
@@ -64,23 +52,20 @@ a{
   color:inherit;
 }
 
-
-/* =====================================================
-   الشريط العلوي
-   ===================================================== */
+/* =========================
+   TOP BAR
+========================= */
 
 .topbar{
-
   background:
     linear-gradient(
       90deg,
-      #2d0a1f,
-      #501333,
-      #2d0a1f
+      #270817,
+      #521332,
+      #270817
     );
 
   color:#fff;
-
   padding:8px 5%;
 
   display:flex;
@@ -88,7 +73,6 @@ a{
   align-items:center;
 
   gap:15px;
-
   font-size:13px;
 }
 
@@ -98,23 +82,19 @@ a{
   gap:7px;
 }
 
-
-/* =====================================================
+/* =========================
    NAVIGATION
-   ===================================================== */
+========================= */
 
 nav{
-
   position:sticky;
   top:0;
   z-index:100;
 
-  background:rgba(255,250,244,.96);
-
+  background:rgba(255,250,244,.97);
   backdrop-filter:blur(10px);
 
-  border-bottom:
-    1px solid #e6d8c8;
+  border-bottom:1px solid #e5d6c6;
 
   padding:12px 5%;
 
@@ -123,81 +103,60 @@ nav{
   justify-content:space-between;
 }
 
-
 .brand{
-
   display:flex;
   align-items:center;
-
   gap:10px;
 
   font-weight:900;
-
   color:var(--wine);
-
   font-size:20px;
 }
 
-
 .brand-mark{
-
   width:47px;
   height:47px;
 
-  border:
-    2px solid var(--gold);
-
+  border:2px solid var(--gold);
   border-radius:50%;
 
   display:grid;
   place-items:center;
 
   color:var(--gold);
-
   font-size:23px;
 
   background:#fff;
 
   box-shadow:
-    0 3px 12px rgba(90,40,60,.12);
+    0 3px 12px rgba(80,30,50,.12);
 }
 
-
 nav .links{
-
   display:flex;
-
   gap:25px;
 
   font-weight:700;
-
   font-size:14px;
 }
 
 nav .links a{
-
   transition:.2s;
-
 }
 
 nav .links a:hover{
-
   color:var(--wine2);
-
 }
 
-
-/* =====================================================
-   BANNER
-   قفطان مغربي أصيل من فاس
-   ===================================================== */
+/* =========================
+   HERO / BANNER
+========================= */
 
 .hero{
 
-  min-height:620px;
+  min-height:650px;
 
   display:grid;
-
   place-items:center;
 
   text-align:center;
@@ -205,34 +164,32 @@ nav .links a:hover{
   padding:80px 20px;
 
   position:relative;
-
   overflow:hidden;
 
-
   /*
-     قفطان مغربي تقليدي من فاس
+     صورة امرأة بتكشيطة مغربية
+     مناسبة للبانر الرئيسي
   */
 
   background-image:
 
     linear-gradient(
-      rgba(43,8,29,.45),
-      rgba(43,8,29,.78)
+      90deg,
+      rgba(42,7,27,.80),
+      rgba(65,10,39,.45),
+      rgba(42,7,27,.68)
     ),
 
     url(
-      "https://commons.wikimedia.org/wiki/Special:Redirect/file/Morocco_Caftan.jpg"
+      "https://commons.wikimedia.org/wiki/Special:Redirect/file/Moroccan_Takchita.jpg"
     );
-
 
   background-size:cover;
 
-  background-position:center 35%;
-
+  background-position:center center;
 }
 
-
-/* إطار ذهبي */
+/* الإطار الذهبي */
 
 .hero:before{
 
@@ -244,15 +201,14 @@ nav .links a:hover{
 
   border:
     1px solid
-    rgba(234,210,141,.65);
+    rgba(236,211,143,.7);
 
   z-index:1;
 
   pointer-events:none;
 }
 
-
-/* زخرفة */
+/* زخرفة خلفية */
 
 .hero:after{
 
@@ -260,30 +216,26 @@ nav .links a:hover{
 
   position:absolute;
 
-  width:420px;
-  height:420px;
+  width:450px;
+  height:450px;
 
-  left:-190px;
-  bottom:-250px;
+  left:-210px;
+  bottom:-270px;
 
   border:
     1px solid
-    rgba(234,210,141,.25);
+    rgba(236,211,143,.28);
 
   border-radius:50%;
 
   color:
-    rgba(234,210,141,.3);
+    rgba(236,211,143,.35);
 
   font-size:90px;
 
   display:grid;
   place-items:center;
-
 }
-
-
-/* محتوى البانر */
 
 .hero-content{
 
@@ -294,11 +246,7 @@ nav .links a:hover{
   max-width:900px;
 
   color:#fff;
-
 }
-
-
-/* الشعار */
 
 .logo-icon{
 
@@ -312,9 +260,6 @@ nav .links a:hover{
     0 3px 15px rgba(0,0,0,.6);
 }
 
-
-/* اسم المتجر */
-
 .hero h1{
 
   font-size:
@@ -324,14 +269,11 @@ nav .links a:hover{
 
   line-height:1.1;
 
-  margin-bottom:4px;
+  margin-bottom:5px;
 
   text-shadow:
     0 4px 20px rgba(0,0,0,.7);
 }
-
-
-/* الاسم اللاتيني */
 
 .latin{
 
@@ -346,9 +288,6 @@ nav .links a:hover{
   margin-bottom:15px;
 }
 
-
-/* الوصف */
-
 .hero p{
 
   font-size:
@@ -359,21 +298,17 @@ nav .links a:hover{
   margin-bottom:15px;
 
   text-shadow:
-    0 2px 10px rgba(0,0,0,.6);
+    0 2px 10px rgba(0,0,0,.7);
 }
-
 
 .address{
 
   font-size:15px;
 
-  color:#f9e9c2;
+  color:#f8e7bd;
 
   margin-bottom:28px;
 }
-
-
-/* الأزرار */
 
 .buttons{
 
@@ -385,7 +320,6 @@ nav .links a:hover{
 
   gap:12px;
 }
-
 
 .btn{
 
@@ -405,17 +339,11 @@ nav .links a:hover{
   font-weight:800;
 
   transition:.25s;
-
-  cursor:pointer;
 }
-
 
 .btn:hover{
-
-  transform:
-    translateY(-3px);
+  transform:translateY(-3px);
 }
-
 
 .btn-main{
 
@@ -426,27 +354,22 @@ nav .links a:hover{
       var(--gold-light)
     );
 
-  color:
-    var(--wine-dark);
+  color:var(--wine-dark);
 
   box-shadow:
-    0 6px 20px
-    rgba(0,0,0,.2);
+    0 6px 20px rgba(0,0,0,.25);
 }
-
 
 .btn-wa{
 
   background:var(--green);
 
   color:#fff;
-
 }
 
-
-/* =====================================================
+/* =========================
    SECTIONS
-   ===================================================== */
+========================= */
 
 section{
 
@@ -457,7 +380,6 @@ section{
 
   margin:auto;
 }
-
 
 .section-title{
 
@@ -470,7 +392,6 @@ section{
   margin-bottom:8px;
 }
 
-
 .section-sub{
 
   text-align:center;
@@ -480,10 +401,9 @@ section{
   margin-bottom:30px;
 }
 
-
-/* =====================================================
+/* =========================
    SEARCH
-   ===================================================== */
+========================= */
 
 .search{
 
@@ -504,10 +424,8 @@ section{
   overflow:hidden;
 
   box-shadow:
-    0 5px 20px
-    rgba(80,30,50,.06);
+    0 5px 20px rgba(80,30,50,.06);
 }
-
 
 .search input{
 
@@ -523,10 +441,9 @@ section{
   font-family:inherit;
 }
 
-
-/* =====================================================
+/* =========================
    FILTERS
-   ===================================================== */
+========================= */
 
 .filters{
 
@@ -541,7 +458,6 @@ section{
   margin:
     20px 0 30px;
 }
-
 
 .filter{
 
@@ -562,7 +478,6 @@ section{
   transition:.2s;
 }
 
-
 .filter.active,
 .filter:hover{
 
@@ -573,10 +488,9 @@ section{
   border-color:var(--wine);
 }
 
-
-/* =====================================================
+/* =========================
    PRODUCTS
-   ===================================================== */
+========================= */
 
 .grid{
 
@@ -590,7 +504,6 @@ section{
 
   gap:22px;
 }
-
 
 .card{
 
@@ -610,7 +523,6 @@ section{
   transition:.25s;
 }
 
-
 .card:hover{
 
   transform:
@@ -621,12 +533,9 @@ section{
     rgba(76,40,54,.16);
 }
 
-
-/* صور المنتجات */
-
 .product-img{
 
-  height:290px;
+  height:300px;
 
   background:
     var(--cream2);
@@ -636,11 +545,9 @@ section{
   overflow:hidden;
 }
 
-
 .product-img img{
 
   width:100%;
-
   height:100%;
 
   object-fit:cover;
@@ -650,7 +557,6 @@ section{
   transition:.4s;
 }
 
-
 .card:hover
 .product-img img{
 
@@ -658,15 +564,11 @@ section{
     scale(1.05);
 }
 
-
-/* حالة المنتج */
-
 .tag{
 
   position:absolute;
 
   top:12px;
-
   right:12px;
 
   background:var(--green);
@@ -683,18 +585,12 @@ section{
   font-weight:800;
 
   box-shadow:
-    0 3px 10px
-    rgba(0,0,0,.15);
+    0 3px 10px rgba(0,0,0,.15);
 }
-
-
-/* جسم البطاقة */
 
 .card-body{
-
   padding:17px;
 }
-
 
 .card h3{
 
@@ -702,7 +598,6 @@ section{
 
   font-size:19px;
 }
-
 
 .price{
 
@@ -712,10 +607,8 @@ section{
 
   color:var(--gold);
 
-  margin:
-    5px 0;
+  margin:5px 0;
 }
-
 
 .desc{
 
@@ -725,9 +618,6 @@ section{
 
   min-height:45px;
 }
-
-
-/* زر واتساب */
 
 .order{
 
@@ -752,7 +642,6 @@ section{
   transition:.2s;
 }
 
-
 .order:hover{
 
   background:#119a47;
@@ -761,10 +650,9 @@ section{
     translateY(-2px);
 }
 
-
-/* =====================================================
+/* =========================
    INFO
-   ===================================================== */
+========================= */
 
 .info{
 
@@ -796,31 +684,24 @@ section{
     rgba(70,20,50,.15);
 }
 
-
 .info-item{
-
   text-align:center;
 }
 
-
 .info-item .icon{
-
   font-size:30px;
 }
-
 
 .info-item h3{
 
   color:#f5dca9;
 
-  margin:
-    4px 0;
+  margin:4px 0;
 }
 
-
-/* =====================================================
+/* =========================
    FOOTER
-   ===================================================== */
+========================= */
 
 footer{
 
@@ -834,7 +715,6 @@ footer{
   text-align:center;
 }
 
-
 footer .brand{
 
   justify-content:center;
@@ -843,7 +723,6 @@ footer .brand{
 
   margin-bottom:10px;
 }
-
 
 .social{
 
@@ -858,7 +737,6 @@ footer .brand{
   flex-wrap:wrap;
 }
 
-
 .social a{
 
   border:
@@ -871,7 +749,6 @@ footer .brand{
   border-radius:20px;
 }
 
-
 .note{
 
   text-align:center;
@@ -883,17 +760,15 @@ footer .brand{
   margin-top:25px;
 }
 
-
-/* =====================================================
+/* =========================
    MOBILE
-   ===================================================== */
+========================= */
 
 @media(max-width:700px){
 
   nav .links{
     display:none;
   }
-
 
   .topbar{
 
@@ -906,10 +781,9 @@ footer .brand{
     text-align:center;
   }
 
-
   .hero{
 
-    min-height:540px;
+    min-height:560px;
 
     padding:
       55px 15px;
@@ -918,44 +792,34 @@ footer .brand{
       center center;
   }
 
-
   .hero:before{
-
     inset:15px;
   }
 
-
   .latin{
-
     font-size:24px;
   }
 
-
   section{
-
     padding:
       45px 4%;
   }
 
-
   .product-img{
-
-    height:280px;
+    height:285px;
   }
-
 }
 
 </style>
 
 </head>
 
-
 <body>
 
 
-<!-- =====================================================
+<!-- =========================
      TOP BAR
-     ===================================================== -->
+========================= -->
 
 <div class="topbar">
 
@@ -970,9 +834,9 @@ footer .brand{
 </div>
 
 
-<!-- =====================================================
+<!-- =========================
      NAVIGATION
-     ===================================================== -->
+========================= -->
 
 <nav>
 
@@ -988,7 +852,6 @@ footer .brand{
 
   </a>
 
-
   <div class="links">
 
     <a href="#home">
@@ -996,7 +859,11 @@ footer .brand{
     </a>
 
     <a href="#clothes">
-      معرض الملابس
+      القفاطين والتكاشط
+    </a>
+
+    <a href="#djellaba">
+      الجلابة
     </a>
 
     <a href="#accessories">
@@ -1012,9 +879,9 @@ footer .brand{
 </nav>
 
 
-<!-- =====================================================
-     BANNER
-     ===================================================== -->
+<!-- =========================
+     HERO
+========================= -->
 
 <header class="hero" id="home">
 
@@ -1024,33 +891,27 @@ footer .brand{
       ✦
     </div>
 
-
     <h1>
       قفطان ليلى
     </h1>
-
 
     <div class="latin">
       CAFTAN LAYLA
     </div>
 
-
     <p>
-      أناقة القفطان المغربي الأصيل
-      بلمسة عصرية
+      أناقة مغربية أصيلة بلمسة عصرية
     </p>
-
 
     <div class="address">
 
-      ✨ بيع وكراء القفاطين والتكاشط والجلابة والجابادور ✨
+      ✨ قفاطين • تكاشط • جلابة • إكسسوارات ✨
 
       <br>
 
       زواغة العليا - فاس
 
     </div>
-
 
     <div class="buttons">
 
@@ -1061,7 +922,6 @@ footer .brand{
         👗 اكتشفي التشكيلة
 
       </a>
-
 
       <a
         class="btn btn-wa"
@@ -1082,25 +942,19 @@ footer .brand{
 <main>
 
 
-<!-- =====================================================
-     الملابس المغربية
-     ===================================================== -->
+<!-- =========================
+     CAFTAN & TAKCHITA
+========================= -->
 
 <section id="clothes">
 
   <h2 class="section-title">
-
-    معرض الملابس المغربية 👗
-
+    القفاطين والتكاشط 👗
   </h2>
 
-
   <p class="section-sub">
-
-    قفاطين وتكاشط وجلابة وجابادور مستوحاة من الأصالة المغربية
-
+    موديلات مغربية أنيقة للمناسبات والأعراس
   </p>
-
 
   <div class="search">
 
@@ -1112,7 +966,6 @@ footer .brand{
 
   </div>
 
-
   <div
     class="filters"
     id="clothesFilters">
@@ -1120,50 +973,22 @@ footer .brand{
     <button
       class="filter active"
       data-filter="all">
-
       الكل
-
     </button>
-
 
     <button
       class="filter"
       data-filter="قفاطين">
-
       قفاطين
-
     </button>
-
 
     <button
       class="filter"
       data-filter="تكاشط">
-
       تكاشط
-
     </button>
-
-
-    <button
-      class="filter"
-      data-filter="جلابة">
-
-      جلابة
-
-    </button>
-
-
-    <button
-      class="filter"
-      data-filter="جابادور">
-
-      جابادور
-
-    </button>
-
 
   </div>
-
 
   <div
     class="grid"
@@ -1173,78 +998,77 @@ footer .brand{
 </section>
 
 
-<!-- =====================================================
-     الإكسسوارات المغربية
-     ===================================================== -->
+<!-- =========================
+     MODERN DJELLABA
+========================= -->
+
+<section id="djellaba">
+
+  <h2 class="section-title">
+    الجلابة المغربية 🌸
+  </h2>
+
+  <p class="section-sub">
+    جلابة مغربية نسائية عصرية تجمع الأصالة والأناقة
+  </p>
+
+  <div
+    class="grid"
+    id="djellabaGrid">
+  </div>
+
+</section>
+
+
+<!-- =========================
+     ACCESSORIES
+========================= -->
 
 <section id="accessories">
 
   <h2 class="section-title">
-
-    الإكسسوارات المغربية 💎
-
+    إكسسوارات القفطان والتكشيطة 💎
   </h2>
 
-
   <p class="section-sub">
-
-    لمسات مغربية أصيلة تكمل أناقتك
-
+    اختاري اللمسة التي تكمل إطلالتك المغربية
   </p>
-
 
   <div
     class="filters"
     id="accessoryFilters">
 
-
     <button
       class="filter active"
       data-filter="all">
-
       الكل
-
     </button>
-
 
     <button
       class="filter"
       data-filter="مجوهرات">
-
-      مجوهرات
-
+      مجوهرات مغربية
     </button>
-
 
     <button
       class="filter"
       data-filter="أحزمة">
-
-      أحزمة
-
+      أحزمة ومضمة
     </button>
-
 
     <button
       class="filter"
-      data-filter="أحذية">
-
-      بلغة وشربيل
-
+      data-filter="شربيل">
+      شربيل وبلغة
     </button>
-
 
     <button
       class="filter"
       data-filter="تيجان">
-
       تيجان
-
     </button>
 
-
   </div>
-
 
   <div
     class="grid"
@@ -1254,28 +1078,21 @@ footer .brand{
 </section>
 
 
-<!-- =====================================================
-     لماذا قفطان ليلى
-     ===================================================== -->
+<!-- =========================
+     INFO
+========================= -->
 
 <section id="contact">
 
   <h2 class="section-title">
-
     علاش قفطان ليلى؟ ✨
-
   </h2>
 
-
   <p class="section-sub">
-
-    أصالة مغربية، أناقة، وتواصل سريع
-
+    أصالة مغربية وأناقة تليق بالمناسبات
   </p>
 
-
   <div class="info">
-
 
     <div class="info-item">
 
@@ -1284,15 +1101,14 @@ footer .brand{
       </div>
 
       <h3>
-        الطابع المغربي الأصيل
+        هوية مغربية
       </h3>
 
       <p>
-        قفاطين وتكاشط وجلابة وجابادور مستوحاة من التراث المغربي.
+        أزياء مستوحاة من القفطان والتكشيطة والجلابة المغربية.
       </p>
 
     </div>
-
 
     <div class="info-item">
 
@@ -1310,7 +1126,6 @@ footer .brand{
 
     </div>
 
-
     <div class="info-item">
 
       <div class="icon">
@@ -1318,7 +1133,7 @@ footer .brand{
       </div>
 
       <h3>
-        المحل في فاس
+        في فاس
       </h3>
 
       <p>
@@ -1326,7 +1141,6 @@ footer .brand{
       </p>
 
     </div>
-
 
     <div class="info-item">
 
@@ -1344,7 +1158,6 @@ footer .brand{
 
     </div>
 
-
   </div>
 
 </section>
@@ -1352,9 +1165,9 @@ footer .brand{
 </main>
 
 
-<!-- =====================================================
+<!-- =========================
      FOOTER
-     ===================================================== -->
+========================= -->
 
 <footer>
 
@@ -1370,43 +1183,32 @@ footer .brand{
 
   </div>
 
-
   <p>
-    بيع وكراء الملابس التقليدية والعصرية
+    بيع وكراء الملابس المغربية التقليدية والعصرية
   </p>
-
 
   <p>
     📞 0617143753 | 0614445648
   </p>
-
 
   <div class="social">
 
     <a
       target="_blank"
       href="https://wa.me/212617143753">
-
       واتساب 1
-
     </a>
-
 
     <a
       target="_blank"
       href="https://wa.me/212614445648">
-
       واتساب 2
-
     </a>
 
   </div>
 
-
   <div class="note">
-
     © 2026 قفطان ليلى - جميع الحقوق محفوظة
-
   </div>
 
 </footer>
@@ -1415,15 +1217,8 @@ footer .brand{
 <script>
 
 /* =====================================================
-   صور حقيقية لطابع اللباس المغربي
-   ===================================================== */
-
-
-/*
-  الصور المستخدمة من Wikimedia Commons.
-  يمكن استبدالها لاحقاً بصور منتجات المحل.
-*/
-
+   الملابس المغربية
+===================================================== */
 
 const clothes = [
 
@@ -1433,7 +1228,7 @@ const clothes = [
     price:"250 DH",
 
     desc:
-      "قفطان مغربي أصيل بتفاصيل وتطريز فاخر للمناسبات.",
+      "قفطان مغربي أنيق للمناسبات والأعراس.",
 
     image:
       "https://commons.wikimedia.org/wiki/Special:Redirect/file/Morocco_Caftan.jpg",
@@ -1441,36 +1236,33 @@ const clothes = [
     available:true
   },
 
-
   {
-    name:"قفطان النطع الفاسي",
+    name:"قفطان مغربي مطرز",
     category:"قفاطين",
     price:"240 DH",
 
     desc:
-      "قفطان مستوحى من القفطان الفاسي التقليدي المطرز بخيوط ذهبية.",
+      "قفطان بتطريز مغربي راق ولمسة فاخرة.",
 
     image:
-      "https://commons.wikimedia.org/wiki/Special:Redirect/file/Caftan_Ntaa_-_Maroc.jpg",
+      "https://commons.wikimedia.org/wiki/Special:Redirect/file/Moroccan_Qaftan.jpg",
 
     available:true
   },
 
-
   {
-    name:"تكشيطة مغربية",
+    name:"تكشيطة مغربية فاخرة",
     category:"تكاشط",
     price:"250 DH",
 
     desc:
-      "تكشيطة مغربية تقليدية مناسبة للأعراس والمناسبات.",
+      "تكشيطة مغربية للمناسبات والأعراس.",
 
     image:
-      "https://commons.wikimedia.org/wiki/Special:Redirect/file/Takshita.jpg",
+      "https://commons.wikimedia.org/wiki/Special:Redirect/file/Moroccan_Takchita.jpg",
 
     available:true
   },
-
 
   {
     name:"تكشيطة مغربية أنيقة",
@@ -1481,67 +1273,21 @@ const clothes = [
       "إطلالة مغربية فاخرة بتفاصيل تقليدية.",
 
     image:
-      "https://commons.wikimedia.org/wiki/Special:Redirect/file/Tkchita.jpg",
+      "https://commons.wikimedia.org/wiki/Special:Redirect/file/Takshita.jpg",
 
     available:true
   },
 
-
   {
-    name:"جلابة مغربية",
-    category:"جلابة",
-    price:"180 DH",
-
-    desc:
-      "جلابة مغربية أصيلة مناسبة للاستعمال اليومي والمناسبات.",
-
-    image:
-      "https://commons.wikimedia.org/wiki/Special:Redirect/file/Moroccan_djellaba.jpg",
-
-    available:true
-  },
-
-
-  {
-    name:"جلابة مغربية تقليدية",
-    category:"جلابة",
-    price:"200 DH",
-
-    desc:
-      "جلابة بطابع مغربي أصيل مع القلنسوة التقليدية.",
-
-    image:
-      "https://commons.wikimedia.org/wiki/Special:Redirect/file/He_wearing_a_traditional_Moroccan_djellaba.jpg",
-
-    available:true
-  },
-
-
-  {
-    name:"جابادور مغربي",
-    category:"جابادور",
-    price:"200 DH",
-
-    desc:
-      "جابادور رجالي مغربي للمناسبات والأعياد والأعراس.",
-
-    image:
-      "https://commons.wikimedia.org/wiki/Special:Redirect/file/Traditional_clothing_in_Morocco-5.jpg",
-
-    available:true
-  },
-
-
-  {
-    name:"جابادور مغربي أصيل",
-    category:"جابادور",
+    name:"تكشيطة بالتطريز المغربي",
+    category:"تكاشط",
     price:"220 DH",
 
     desc:
-      "تصميم مستوحى من اللباس الرجالي المغربي التقليدي.",
+      "تصميم أنيق مستوحى من اللباس المغربي التقليدي.",
 
     image:
-      "https://commons.wikimedia.org/wiki/Special:Redirect/file/Traditional_clothing_in_Morocco-4.jpg",
+      "https://commons.wikimedia.org/wiki/Special:Redirect/file/Tkchita.jpg",
 
     available:true
   }
@@ -1550,33 +1296,97 @@ const clothes = [
 
 
 /* =====================================================
-   الإكسسوارات المغربية
-   ===================================================== */
+   الجلابة النسائية العصرية
+===================================================== */
 
-const accessories = [
+const djellaba = [
 
   {
-    name:"بلغة مغربية تقليدية",
-    category:"أحذية",
-    price:"120 DH",
+    name:"جلابة مغربية عصرية",
+    category:"جلابة",
+    price:"180 DH",
 
     desc:
-      "بلغة مغربية تقليدية من الجلد، مناسبة مع القفطان والجلابة.",
+      "جلابة نسائية مغربية أنيقة للاستعمال اليومي والمناسبات.",
 
     image:
-      "https://commons.wikimedia.org/wiki/Special:Redirect/file/Moroccan_traditional_babouches.jpg",
+      "https://commons.wikimedia.org/wiki/Special:Redirect/file/A_woman_in_traditional_Moroccan_dress.jpg",
 
     available:true
   },
 
+  {
+    name:"جلابة مغربية أنيقة",
+    category:"جلابة",
+    price:"200 DH",
+
+    desc:
+      "تصميم نسائي مغربي يجمع الأصالة والأناقة.",
+
+    image:
+      "https://commons.wikimedia.org/wiki/Special:Redirect/file/Woman_in_a_traditional_Moroccan_dress.jpg",
+
+    available:true
+  },
 
   {
-    name:"بلغة مغربية فاخرة",
-    category:"أحذية",
+    name:"جلابة مغربية خضراء",
+    category:"جلابة",
+    price:"170 DH",
+
+    desc:
+      "جلابة مغربية نسائية بألوان مميزة.",
+
+    image:
+      "https://commons.wikimedia.org/wiki/Special:Redirect/file/ASC_Leiden_-_van_Achterberg_Collection_-_09_-_17_-_Une_femme_en_djellaba_verte_et_jaune_dans_un_march%C3%A9_-_Essaouira%2C_Maroc_-_Premi%C3%A8re_moiti%C3%A9_des_ann%C3%A9es_1990.jpg",
+
+    available:true
+  }
+
+];
+
+
+/* =====================================================
+   إكسسوارات متناسقة مع القفطان
+===================================================== */
+
+const accessories = [
+
+  {
+    name:"مجوهرات مغربية للعروس",
+    category:"مجوهرات",
+    price:"220 DH",
+
+    desc:
+      "طقم مجوهرات مستوحى من إطلالة العروس المغربية.",
+
+    image:
+      "https://commons.wikimedia.org/wiki/Special:Redirect/file/Les_bijoux_que_porte_la_femme_marocaine_lors_de_son_mariage..jpg",
+
+    available:true
+  },
+
+  {
+    name:"عقد مغربي تقليدي",
+    category:"مجوهرات",
+    price:"180 DH",
+
+    desc:
+      "عقد مغربي تقليدي يليق بالقفطان والتكشيطة.",
+
+    image:
+      "https://commons.wikimedia.org/wiki/Special:Redirect/file/Traditionnal_Moroccan_necklaces.jpg",
+
+    available:true
+  },
+
+  {
+    name:"شربيل مغربي",
+    category:"شربيل",
     price:"150 DH",
 
     desc:
-      "بلغة مغربية أنيقة بتفاصيل تقليدية.",
+      "شربيل مغربي أنيق للمناسبات وإطلالة القفطان.",
 
     image:
       "https://commons.wikimedia.org/wiki/Special:Redirect/file/Babouche_marocaine_Air_babouche.jpg",
@@ -1584,77 +1394,58 @@ const accessories = [
     available:true
   },
 
-
   {
-    name:"بلغة باللون العنابي",
-    category:"أحذية",
-    price:"130 DH",
+    name:"بلغة نسائية مغربية",
+    category:"شربيل",
+    price:"120 DH",
 
     desc:
-      "بلغة مغربية تقليدية من الجلد العنابي.",
+      "بلغة مغربية تقليدية مناسبة للجلابة والقفطان.",
 
     image:
-      "https://commons.wikimedia.org/wiki/Special:Redirect/file/Moroccan_babouche,_burgundy_leather_with_silver_sequins,_20th_century_-_Bata_Shoe_Museum_-_DSC00131.JPG",
+      "https://commons.wikimedia.org/wiki/Special:Redirect/file/Moroccan_traditional_babouches.jpg",
 
     available:true
   },
 
-
   {
-    name:"بلغة خضراء تقليدية",
-    category:"أحذية",
+    name:"بلغة مغربية فاخرة",
+    category:"شربيل",
     price:"140 DH",
 
     desc:
-      "بلغة بطابع مغربي تقليدي باللون الأخضر.",
+      "بلغة نسائية من التراث المغربي بلمسة أنيقة.",
 
     image:
-      "https://commons.wikimedia.org/wiki/Special:Redirect/file/Moroccan_babouche,_green_velvet_with_silver_thread,_20th_century_-_Bata_Shoe_Museum_-_DSC00124.JPG",
+      "https://commons.wikimedia.org/wiki/Special:Redirect/file/Babouche_Chleuh.jpg",
 
     available:true
   },
 
-
   {
-    name:"حزام مغربي للقفطان",
+    name:"مضمة وحزام للقفطان",
     category:"أحزمة",
-    price:"180 DH",
-
-    desc:
-      "حزام تقليدي لإكمال إطلالة القفطان والتكشيطة.",
-
-    image:
-      "https://commons.wikimedia.org/wiki/Special:Redirect/file/Caftan,_c._1960,_Morocco.jpg",
-
-    available:true
-  },
-
-
-  {
-    name:"إكسسوار مغربي فاخر",
-    category:"مجوهرات",
     price:"200 DH",
 
     desc:
-      "إكسسوار مستوحى من المجوهرات المغربية التقليدية.",
+      "حزام أنيق لإكمال إطلالة القفطان والتكشيطة.",
 
     image:
-      "https://commons.wikimedia.org/wiki/Special:Redirect/file/Moroccan_Caftan.jpg",
+      "https://commons.wikimedia.org/wiki/Special:Redirect/file/Moroccan_Takchita.jpg",
 
     available:true
   },
 
-
   {
-    name:"تاج مغربي للعروس",
+    name:"تاج العروس المغربية",
     category:"تيجان",
-    price:"220 DH",
+    price:"250 DH",
 
     desc:
-      "تاج مستوحى من إطلالة العروس المغربية التقليدية.",
+      "تاج مستوحى من إطلالة العروس المغربية.",
 
     image:
-      "https://commons.wikimedia.org/wiki/Special:Redirect/file/Takshita.jpg",
+      "https://commons.wikimedia.org/wiki/Special:Redirect/file/Les_bijoux_que_porte_la_femme_marocaine_lors_de_son_mariage..jpg",
 
     available:true
   }
@@ -1664,91 +1455,90 @@ const accessories = [
 
 /* =====================================================
    واتساب
-   ===================================================== */
+===================================================== */
 
-const WA =
-  "212617143753";
+const WA="212617143753";
 
 
 /* =====================================================
    رسالة واتساب
-   ===================================================== */
+===================================================== */
 
 function waMessage(product,type){
 
-  const verb =
-    type === "accessory"
+  let verb="بغيت نسول على هاد الموديل";
 
-    ? "بغيت نسول على هاد الإكسسوار"
+  if(type==="accessory"){
+    verb="بغيت نسول على هاد الإكسسوار";
+  }
 
-    : "بغيت نسول على هاد الموديل";
-
+  if(type==="djellaba"){
+    verb="بغيت نسول على هاد الجلابة";
+  }
 
   return `
-
 السلام عليكم 🌸
 
-${verb}: ${product.name}
+${verb}:
+${product.name}
 
-الثمن: ${product.price}
+الثمن:
+${product.price}
 
 واش مازال متوفر؟
 
 وبغيت نعرف واش متاح للبيع أو الكراء.
 
-وشكراً بزاف 🙏
-
+شكراً بزاف 🙏
 `;
-
 }
 
 
 /* =====================================================
    بطاقة المنتج
-   ===================================================== */
+===================================================== */
 
 function card(product,type){
 
-  const image = product.image
+  const image=product.image
 
     ? `<img
-         src="${product.image}"
-         alt="${product.name}"
-         loading="lazy"
-         onerror="this.style.display='none';this.parentElement.classList.add('image-error')"
+        src="${product.image}"
+        alt="${product.name}"
+        loading="lazy"
        >`
 
     : `<div
-         style="
-           height:100%;
-           display:grid;
-           place-items:center;
-           font-size:70px;
-         ">
-         👗
+        style="
+        height:100%;
+        display:grid;
+        place-items:center;
+        font-size:70px">
+        👗
        </div>`;
 
 
-  const buttonText =
-    type === "accessory"
+  let buttonText=
+    "💬 نسول على هاد الموديل";
 
-    ? "💬 نسول على هاد الإكسسوار"
+  if(type==="accessory"){
+    buttonText=
+      "💬 نسول على هاد الإكسسوار";
+  }
 
-    : "💬 نسول على هاد الموديل";
+  if(type==="djellaba"){
+    buttonText=
+      "💬 نسول على هاد الجلابة";
+  }
 
 
   return `
 
-  <article
-    class="card"
-    data-category="${product.category}"
-    data-name="${product.name}">
-
+  <article class="card">
 
     <div class="product-img">
 
       ${image}
-
 
       ${
         product.available
@@ -1758,27 +1548,22 @@ function card(product,type){
         : '<span class="tag" style="background:#888">غير متاح</span>'
       }
 
-
     </div>
 
 
     <div class="card-body">
 
-
       <h3>
         ${product.name}
       </h3>
-
 
       <div class="price">
         ${product.price}
       </div>
 
-
       <p class="desc">
         ${product.desc}
       </p>
-
 
       <a
         class="order"
@@ -1791,28 +1576,24 @@ function card(product,type){
 
       </a>
 
-
     </div>
-
 
   </article>
 
   `;
-
 }
 
 
 /* =====================================================
-   عرض المنتجات
-   ===================================================== */
+   RENDER
+===================================================== */
 
 function render(data,id,type){
 
-  document.getElementById(id).innerHTML =
-    data
-      .map(p => card(p,type))
-      .join("");
-
+  document.getElementById(id).innerHTML=
+    data.map(
+      p=>card(p,type)
+    ).join("");
 }
 
 
@@ -1822,6 +1603,11 @@ render(
   "clothes"
 );
 
+render(
+  djellaba,
+  "djellabaGrid",
+  "djellaba"
+);
 
 render(
   accessories,
@@ -1831,8 +1617,8 @@ render(
 
 
 /* =====================================================
-   الفلاتر
-   ===================================================== */
+   FILTERS
+===================================================== */
 
 function setupFilters(
   containerId,
@@ -1845,52 +1631,43 @@ function setupFilters(
     .querySelectorAll(
       `#${containerId} .filter`
     )
-    .forEach(btn => {
-
+    .forEach(btn=>{
 
       btn.addEventListener(
         "click",
         ()=>{
 
-
           document
             .querySelectorAll(
               `#${containerId} .filter`
             )
-            .forEach(b =>
-              b.classList.remove("active")
+            .forEach(
+              b=>b.classList.remove("active")
             );
-
 
           btn.classList.add("active");
 
-
-          const value =
+          const value=
             btn.dataset.filter;
-
 
           render(
 
-            value === "all"
+            value==="all"
 
               ? data
 
               : data.filter(
-                  p =>
-                    p.category === value
+                  p=>p.category===value
                 ),
 
             gridId,
 
             type
-
           );
-
         }
       );
 
     });
-
 }
 
 
@@ -1901,7 +1678,6 @@ setupFilters(
   "clothes"
 );
 
-
 setupFilters(
   "accessoryFilters",
   accessories,
@@ -1911,30 +1687,29 @@ setupFilters(
 
 
 /* =====================================================
-   البحث
-   ===================================================== */
+   SEARCH
+===================================================== */
 
 document
   .getElementById("clothesSearch")
   .addEventListener(
     "input",
-    e => {
+    e=>{
 
-
-      const q =
+      const q=
         e.target.value
           .trim()
           .toLowerCase();
 
-
       render(
 
-        clothes.filter(p =>
+        clothes.filter(
+          p=>
           (
-            p.name +
-            " " +
-            p.category +
-            " " +
+            p.name+
+            " "+
+            p.category+
+            " "+
             p.desc
           )
           .toLowerCase()
@@ -1944,7 +1719,6 @@ document
         "clothesGrid",
 
         "clothes"
-
       );
 
     }
