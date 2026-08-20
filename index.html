@@ -1,149 +1,1075 @@
-```css
+```html
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<meta name="description"
+      content="قفطان ليلى - بيع وكراء القفاطين والتكاشط والجلابة والجابادور والإكسسوارات المغربية في زواغة العليا، فاس">
+
+<title>قفطان ليلى | Caftan Layla</title>
+
+<style>
+
 /* =====================================================
-   بانر فاخر بطابع القفطان المغربي التقليدي
+   الهوية البصرية
    ===================================================== */
 
-.hero{
-  min-height:610px;
-  display:grid;
-  place-items:center;
-  text-align:center;
-  padding:80px 20px;
-  position:relative;
-  overflow:hidden;
+:root{
+  --wine:#4d1235;
+  --wine-dark:#300b21;
+  --wine2:#751e4f;
+
+  --gold:#c9a34e;
+  --gold-light:#ead28d;
+
+  --cream:#fffaf4;
+  --cream2:#f7eee3;
+
+  --green:#16b957;
+
+  --text:#30242b;
+  --muted:#776b72;
+
+  --white:#fff;
+}
+
+
+/* RESET */
+
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:"Tahoma","Arial",sans-serif;
+  background:var(--cream);
+  color:var(--text);
+  line-height:1.7;
+}
+
+a{
+  text-decoration:none;
+  color:inherit;
+}
+
+
+/* =====================================================
+   الشريط العلوي
+   ===================================================== */
+
+.topbar{
 
   background:
     linear-gradient(
-      rgba(48,10,32,.55),
-      rgba(48,10,32,.72)
-    ),
-    url("https://images.unsplash.com/photo-1594736797933-d0501ba2fe65?auto=format&fit=crop&w=2000&q=90");
+      90deg,
+      #2d0a1f,
+      #501333,
+      #2d0a1f
+    );
 
-  background-size:cover;
-  background-position:center;
+  color:#fff;
+
+  padding:8px 5%;
+
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+
+  gap:15px;
+
+  font-size:13px;
 }
 
-/* إطار ذهبي فاخر */
-
-.hero:before{
-  content:"";
-  position:absolute;
-  inset:25px;
-  border:1px solid rgba(231,202,125,.65);
-  pointer-events:none;
-  z-index:1;
+.topbar span{
+  display:flex;
+  align-items:center;
+  gap:7px;
 }
 
-/* زخرفة دائرية */
 
-.hero:after{
-  content:"✦";
-  position:absolute;
-  width:430px;
-  height:430px;
-  border:1px solid rgba(231,202,125,.25);
+/* =====================================================
+   NAVIGATION
+   ===================================================== */
+
+nav{
+
+  position:sticky;
+  top:0;
+  z-index:100;
+
+  background:rgba(255,250,244,.96);
+
+  backdrop-filter:blur(10px);
+
+  border-bottom:
+    1px solid #e6d8c8;
+
+  padding:12px 5%;
+
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+
+.brand{
+
+  display:flex;
+  align-items:center;
+
+  gap:10px;
+
+  font-weight:900;
+
+  color:var(--wine);
+
+  font-size:20px;
+}
+
+
+.brand-mark{
+
+  width:47px;
+  height:47px;
+
+  border:
+    2px solid var(--gold);
+
   border-radius:50%;
-  left:-170px;
-  bottom:-250px;
-  color:rgba(231,202,125,.3);
-  font-size:100px;
+
   display:grid;
   place-items:center;
+
+  color:var(--gold);
+
+  font-size:23px;
+
+  background:#fff;
+
+  box-shadow:
+    0 3px 12px rgba(90,40,60,.12);
 }
+
+
+nav .links{
+
+  display:flex;
+
+  gap:25px;
+
+  font-weight:700;
+
+  font-size:14px;
+}
+
+nav .links a{
+
+  transition:.2s;
+
+}
+
+nav .links a:hover{
+
+  color:var(--wine2);
+
+}
+
+
+/* =====================================================
+   BANNER
+   قفطان مغربي أصيل من فاس
+   ===================================================== */
+
+.hero{
+
+  min-height:620px;
+
+  display:grid;
+
+  place-items:center;
+
+  text-align:center;
+
+  padding:80px 20px;
+
+  position:relative;
+
+  overflow:hidden;
+
+
+  /*
+     قفطان مغربي تقليدي من فاس
+  */
+
+  background-image:
+
+    linear-gradient(
+      rgba(43,8,29,.45),
+      rgba(43,8,29,.78)
+    ),
+
+    url(
+      "https://commons.wikimedia.org/wiki/Special:Redirect/file/Morocco_Caftan.jpg"
+    );
+
+
+  background-size:cover;
+
+  background-position:center 35%;
+
+}
+
+
+/* إطار ذهبي */
+
+.hero:before{
+
+  content:"";
+
+  position:absolute;
+
+  inset:22px;
+
+  border:
+    1px solid
+    rgba(234,210,141,.65);
+
+  z-index:1;
+
+  pointer-events:none;
+}
+
+
+/* زخرفة */
+
+.hero:after{
+
+  content:"✦";
+
+  position:absolute;
+
+  width:420px;
+  height:420px;
+
+  left:-190px;
+  bottom:-250px;
+
+  border:
+    1px solid
+    rgba(234,210,141,.25);
+
+  border-radius:50%;
+
+  color:
+    rgba(234,210,141,.3);
+
+  font-size:90px;
+
+  display:grid;
+  place-items:center;
+
+}
+
 
 /* محتوى البانر */
 
 .hero-content{
+
   position:relative;
+
   z-index:2;
+
   max-width:900px;
+
   color:#fff;
+
 }
+
 
 /* الشعار */
 
 .logo-icon{
-  font-size:58px;
-  color:#e7ca7d;
+
+  font-size:60px;
+
+  color:var(--gold-light);
+
   margin-bottom:5px;
+
   text-shadow:
-    0 3px 15px rgba(0,0,0,.5);
+    0 3px 15px rgba(0,0,0,.6);
 }
+
 
 /* اسم المتجر */
 
 .hero h1{
-  font-size:clamp(44px,8vw,82px);
+
+  font-size:
+    clamp(45px,8vw,82px);
+
   color:#fff;
+
   line-height:1.1;
+
   margin-bottom:4px;
+
   text-shadow:
-    0 4px 20px rgba(0,0,0,.6);
+    0 4px 20px rgba(0,0,0,.7);
 }
+
 
 /* الاسم اللاتيني */
 
 .latin{
+
   font-family:Georgia,serif;
+
   font-size:31px;
-  color:#e7ca7d;
+
+  color:var(--gold-light);
+
   letter-spacing:3px;
+
   margin-bottom:15px;
 }
+
 
 /* الوصف */
 
 .hero p{
-  font-size:clamp(18px,2.7vw,25px);
+
+  font-size:
+    clamp(18px,2.7vw,25px);
+
   font-weight:700;
+
   margin-bottom:15px;
-  text-shadow:0 2px 8px rgba(0,0,0,.5);
+
+  text-shadow:
+    0 2px 10px rgba(0,0,0,.6);
 }
+
 
 .address{
+
   font-size:15px;
-  color:#f7e8c6;
+
+  color:#f9e9c2;
+
   margin-bottom:28px;
 }
-```
 
-**والأفضل أن تغيّر نص البانر أيضًا إلى:**
 
-```html
+/* الأزرار */
+
+.buttons{
+
+  display:flex;
+
+  justify-content:center;
+
+  flex-wrap:wrap;
+
+  gap:12px;
+}
+
+
+.btn{
+
+  display:inline-flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  gap:8px;
+
+  padding:
+    14px 27px;
+
+  border-radius:30px;
+
+  font-weight:800;
+
+  transition:.25s;
+
+  cursor:pointer;
+}
+
+
+.btn:hover{
+
+  transform:
+    translateY(-3px);
+}
+
+
+.btn-main{
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--gold),
+      var(--gold-light)
+    );
+
+  color:
+    var(--wine-dark);
+
+  box-shadow:
+    0 6px 20px
+    rgba(0,0,0,.2);
+}
+
+
+.btn-wa{
+
+  background:var(--green);
+
+  color:#fff;
+
+}
+
+
+/* =====================================================
+   SECTIONS
+   ===================================================== */
+
+section{
+
+  padding:
+    65px 5%;
+
+  max-width:1250px;
+
+  margin:auto;
+}
+
+
+.section-title{
+
+  text-align:center;
+
+  color:var(--wine);
+
+  font-size:32px;
+
+  margin-bottom:8px;
+}
+
+
+.section-sub{
+
+  text-align:center;
+
+  color:var(--muted);
+
+  margin-bottom:30px;
+}
+
+
+/* =====================================================
+   SEARCH
+   ===================================================== */
+
+.search{
+
+  max-width:430px;
+
+  margin:
+    0 auto 25px;
+
+  display:flex;
+
+  background:#fff;
+
+  border:
+    1px solid #e1d5c9;
+
+  border-radius:28px;
+
+  overflow:hidden;
+
+  box-shadow:
+    0 5px 20px
+    rgba(80,30,50,.06);
+}
+
+
+.search input{
+
+  border:0;
+
+  outline:0;
+
+  padding:
+    13px 18px;
+
+  flex:1;
+
+  font-family:inherit;
+}
+
+
+/* =====================================================
+   FILTERS
+   ===================================================== */
+
+.filters{
+
+  display:flex;
+
+  gap:8px;
+
+  flex-wrap:wrap;
+
+  justify-content:center;
+
+  margin:
+    20px 0 30px;
+}
+
+
+.filter{
+
+  border:
+    1px solid #e2d5c7;
+
+  background:#fff;
+
+  padding:
+    8px 18px;
+
+  border-radius:22px;
+
+  cursor:pointer;
+
+  font-weight:700;
+
+  transition:.2s;
+}
+
+
+.filter.active,
+.filter:hover{
+
+  background:var(--wine);
+
+  color:#fff;
+
+  border-color:var(--wine);
+}
+
+
+/* =====================================================
+   PRODUCTS
+   ===================================================== */
+
+.grid{
+
+  display:grid;
+
+  grid-template-columns:
+    repeat(
+      auto-fit,
+      minmax(220px,1fr)
+    );
+
+  gap:22px;
+}
+
+
+.card{
+
+  background:#fff;
+
+  border:
+    1px solid #eadfd5;
+
+  border-radius:20px;
+
+  overflow:hidden;
+
+  box-shadow:
+    0 8px 28px
+    rgba(76,40,54,.08);
+
+  transition:.25s;
+}
+
+
+.card:hover{
+
+  transform:
+    translateY(-6px);
+
+  box-shadow:
+    0 15px 35px
+    rgba(76,40,54,.16);
+}
+
+
+/* صور المنتجات */
+
+.product-img{
+
+  height:290px;
+
+  background:
+    var(--cream2);
+
+  position:relative;
+
+  overflow:hidden;
+}
+
+
+.product-img img{
+
+  width:100%;
+
+  height:100%;
+
+  object-fit:cover;
+
+  display:block;
+
+  transition:.4s;
+}
+
+
+.card:hover
+.product-img img{
+
+  transform:
+    scale(1.05);
+}
+
+
+/* حالة المنتج */
+
+.tag{
+
+  position:absolute;
+
+  top:12px;
+
+  right:12px;
+
+  background:var(--green);
+
+  color:#fff;
+
+  border-radius:15px;
+
+  padding:
+    4px 12px;
+
+  font-size:12px;
+
+  font-weight:800;
+
+  box-shadow:
+    0 3px 10px
+    rgba(0,0,0,.15);
+}
+
+
+/* جسم البطاقة */
+
+.card-body{
+
+  padding:17px;
+}
+
+
+.card h3{
+
+  color:var(--wine);
+
+  font-size:19px;
+}
+
+
+.price{
+
+  font-size:21px;
+
+  font-weight:900;
+
+  color:var(--gold);
+
+  margin:
+    5px 0;
+}
+
+
+.desc{
+
+  font-size:13px;
+
+  color:var(--muted);
+
+  min-height:45px;
+}
+
+
+/* زر واتساب */
+
+.order{
+
+  width:100%;
+
+  margin-top:13px;
+
+  background:var(--green);
+
+  color:#fff;
+
+  padding:11px;
+
+  border-radius:25px;
+
+  display:block;
+
+  text-align:center;
+
+  font-weight:800;
+
+  transition:.2s;
+}
+
+
+.order:hover{
+
+  background:#119a47;
+
+  transform:
+    translateY(-2px);
+}
+
+
+/* =====================================================
+   INFO
+   ===================================================== */
+
+.info{
+
+  background:
+    linear-gradient(
+      120deg,
+      var(--wine),
+      #7d315c
+    );
+
+  color:#fff;
+
+  border-radius:25px;
+
+  padding:38px;
+
+  display:grid;
+
+  grid-template-columns:
+    repeat(
+      auto-fit,
+      minmax(220px,1fr)
+    );
+
+  gap:25px;
+
+  box-shadow:
+    0 15px 35px
+    rgba(70,20,50,.15);
+}
+
+
+.info-item{
+
+  text-align:center;
+}
+
+
+.info-item .icon{
+
+  font-size:30px;
+}
+
+
+.info-item h3{
+
+  color:#f5dca9;
+
+  margin:
+    4px 0;
+}
+
+
+/* =====================================================
+   FOOTER
+   ===================================================== */
+
+footer{
+
+  background:#321127;
+
+  color:#fff;
+
+  padding:
+    40px 5%;
+
+  text-align:center;
+}
+
+
+footer .brand{
+
+  justify-content:center;
+
+  color:#fff;
+
+  margin-bottom:10px;
+}
+
+
+.social{
+
+  margin-top:15px;
+
+  display:flex;
+
+  justify-content:center;
+
+  gap:10px;
+
+  flex-wrap:wrap;
+}
+
+
+.social a{
+
+  border:
+    1px solid
+    rgba(255,255,255,.3);
+
+  padding:
+    7px 15px;
+
+  border-radius:20px;
+}
+
+
+.note{
+
+  text-align:center;
+
+  color:#cdbec5;
+
+  font-size:12px;
+
+  margin-top:25px;
+}
+
+
+/* =====================================================
+   MOBILE
+   ===================================================== */
+
+@media(max-width:700px){
+
+  nav .links{
+    display:none;
+  }
+
+
+  .topbar{
+
+    font-size:11px;
+
+    flex-direction:column;
+
+    gap:2px;
+
+    text-align:center;
+  }
+
+
+  .hero{
+
+    min-height:540px;
+
+    padding:
+      55px 15px;
+
+    background-position:
+      center center;
+  }
+
+
+  .hero:before{
+
+    inset:15px;
+  }
+
+
+  .latin{
+
+    font-size:24px;
+  }
+
+
+  section{
+
+    padding:
+      45px 4%;
+  }
+
+
+  .product-img{
+
+    height:280px;
+  }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     TOP BAR
+     ===================================================== -->
+
+<div class="topbar">
+
+  <span>
+    📍 طريق عين السمن 18 مكرر، بلوك ب، الوفاق، زواغة العليا
+  </span>
+
+  <span>
+    📞 0617143753 | 0614445648
+  </span>
+
+</div>
+
+
+<!-- =====================================================
+     NAVIGATION
+     ===================================================== -->
+
+<nav>
+
+  <a class="brand" href="#home">
+
+    <span class="brand-mark">
+      ✦
+    </span>
+
+    <span>
+      قفطان ليلى
+    </span>
+
+  </a>
+
+
+  <div class="links">
+
+    <a href="#home">
+      الرئيسية
+    </a>
+
+    <a href="#clothes">
+      معرض الملابس
+    </a>
+
+    <a href="#accessories">
+      الإكسسوارات
+    </a>
+
+    <a href="#contact">
+      تواصل معنا
+    </a>
+
+  </div>
+
+</nav>
+
+
+<!-- =====================================================
+     BANNER
+     ===================================================== -->
+
 <header class="hero" id="home">
 
   <div class="hero-content">
 
-    <div class="logo-icon">✦</div>
+    <div class="logo-icon">
+      ✦
+    </div>
 
-    <h1>قفطان ليلى</h1>
+
+    <h1>
+      قفطان ليلى
+    </h1>
+
 
     <div class="latin">
       CAFTAN LAYLA
     </div>
+
 
     <p>
       أناقة القفطان المغربي الأصيل
       بلمسة عصرية
     </p>
 
+
     <div class="address">
-      ✨ بيع وكراء القفاطين والتكاشط والجلابة ✨
+
+      ✨ بيع وكراء القفاطين والتكاشط والجلابة والجابادور ✨
+
       <br>
+
       زواغة العليا - فاس
+
     </div>
+
 
     <div class="buttons">
 
-      <a class="btn btn-main" href="#clothes">
+      <a
+        class="btn btn-main"
+        href="#clothes">
+
         👗 اكتشفي التشكيلة
+
       </a>
+
 
       <a
         class="btn btn-wa"
         target="_blank"
         href="https://wa.me/212617143753?text=السلام%20عليكم%20🌸%20بغيت%20نسول%20على%20شي%20موديل%20من%20عند%20قفطان%20ليلى">
+
         💬 تواصلي معنا عبر واتساب
+
       </a>
 
     </div>
@@ -151,8 +1077,882 @@
   </div>
 
 </header>
+
+
+<main>
+
+
+<!-- =====================================================
+     الملابس المغربية
+     ===================================================== -->
+
+<section id="clothes">
+
+  <h2 class="section-title">
+
+    معرض الملابس المغربية 👗
+
+  </h2>
+
+
+  <p class="section-sub">
+
+    قفاطين وتكاشط وجلابة وجابادور مستوحاة من الأصالة المغربية
+
+  </p>
+
+
+  <div class="search">
+
+    <input
+      id="clothesSearch"
+      type="search"
+      placeholder="🔎 قلّبي على موديل..."
+    >
+
+  </div>
+
+
+  <div
+    class="filters"
+    id="clothesFilters">
+
+    <button
+      class="filter active"
+      data-filter="all">
+
+      الكل
+
+    </button>
+
+
+    <button
+      class="filter"
+      data-filter="قفاطين">
+
+      قفاطين
+
+    </button>
+
+
+    <button
+      class="filter"
+      data-filter="تكاشط">
+
+      تكاشط
+
+    </button>
+
+
+    <button
+      class="filter"
+      data-filter="جلابة">
+
+      جلابة
+
+    </button>
+
+
+    <button
+      class="filter"
+      data-filter="جابادور">
+
+      جابادور
+
+    </button>
+
+
+  </div>
+
+
+  <div
+    class="grid"
+    id="clothesGrid">
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     الإكسسوارات المغربية
+     ===================================================== -->
+
+<section id="accessories">
+
+  <h2 class="section-title">
+
+    الإكسسوارات المغربية 💎
+
+  </h2>
+
+
+  <p class="section-sub">
+
+    لمسات مغربية أصيلة تكمل أناقتك
+
+  </p>
+
+
+  <div
+    class="filters"
+    id="accessoryFilters">
+
+
+    <button
+      class="filter active"
+      data-filter="all">
+
+      الكل
+
+    </button>
+
+
+    <button
+      class="filter"
+      data-filter="مجوهرات">
+
+      مجوهرات
+
+    </button>
+
+
+    <button
+      class="filter"
+      data-filter="أحزمة">
+
+      أحزمة
+
+    </button>
+
+
+    <button
+      class="filter"
+      data-filter="أحذية">
+
+      بلغة وشربيل
+
+    </button>
+
+
+    <button
+      class="filter"
+      data-filter="تيجان">
+
+      تيجان
+
+    </button>
+
+
+  </div>
+
+
+  <div
+    class="grid"
+    id="accessoriesGrid">
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     لماذا قفطان ليلى
+     ===================================================== -->
+
+<section id="contact">
+
+  <h2 class="section-title">
+
+    علاش قفطان ليلى؟ ✨
+
+  </h2>
+
+
+  <p class="section-sub">
+
+    أصالة مغربية، أناقة، وتواصل سريع
+
+  </p>
+
+
+  <div class="info">
+
+
+    <div class="info-item">
+
+      <div class="icon">
+        🇲🇦
+      </div>
+
+      <h3>
+        الطابع المغربي الأصيل
+      </h3>
+
+      <p>
+        قفاطين وتكاشط وجلابة وجابادور مستوحاة من التراث المغربي.
+      </p>
+
+    </div>
+
+
+    <div class="info-item">
+
+      <div class="icon">
+        👗
+      </div>
+
+      <h3>
+        بيع وكراء
+      </h3>
+
+      <p>
+        اختاري الموديل المناسب ليك واسولي على البيع أو الكراء.
+      </p>
+
+    </div>
+
+
+    <div class="info-item">
+
+      <div class="icon">
+        📍
+      </div>
+
+      <h3>
+        المحل في فاس
+      </h3>
+
+      <p>
+        طريق عين السمن 18 مكرر، بلوك ب، الوفاق، زواغة العليا.
+      </p>
+
+    </div>
+
+
+    <div class="info-item">
+
+      <div class="icon">
+        💬
+      </div>
+
+      <h3>
+        تواصل سريع
+      </h3>
+
+      <p>
+        تواصلي معنا عبر واتساب لمعرفة المقاسات والتوفر.
+      </p>
+
+    </div>
+
+
+  </div>
+
+</section>
+
+</main>
+
+
+<!-- =====================================================
+     FOOTER
+     ===================================================== -->
+
+<footer>
+
+  <div class="brand">
+
+    <span class="brand-mark">
+      ✦
+    </span>
+
+    <span>
+      قفطان ليلى
+    </span>
+
+  </div>
+
+
+  <p>
+    بيع وكراء الملابس التقليدية والعصرية
+  </p>
+
+
+  <p>
+    📞 0617143753 | 0614445648
+  </p>
+
+
+  <div class="social">
+
+    <a
+      target="_blank"
+      href="https://wa.me/212617143753">
+
+      واتساب 1
+
+    </a>
+
+
+    <a
+      target="_blank"
+      href="https://wa.me/212614445648">
+
+      واتساب 2
+
+    </a>
+
+  </div>
+
+
+  <div class="note">
+
+    © 2026 قفطان ليلى - جميع الحقوق محفوظة
+
+  </div>
+
+</footer>
+
+
+<script>
+
+/* =====================================================
+   صور حقيقية لطابع اللباس المغربي
+   ===================================================== */
+
+
+/*
+  الصور المستخدمة من Wikimedia Commons.
+  يمكن استبدالها لاحقاً بصور منتجات المحل.
+*/
+
+
+const clothes = [
+
+  {
+    name:"قفطان مغربي فاخر",
+    category:"قفاطين",
+    price:"250 DH",
+
+    desc:
+      "قفطان مغربي أصيل بتفاصيل وتطريز فاخر للمناسبات.",
+
+    image:
+      "https://commons.wikimedia.org/wiki/Special:Redirect/file/Morocco_Caftan.jpg",
+
+    available:true
+  },
+
+
+  {
+    name:"قفطان النطع الفاسي",
+    category:"قفاطين",
+    price:"240 DH",
+
+    desc:
+      "قفطان مستوحى من القفطان الفاسي التقليدي المطرز بخيوط ذهبية.",
+
+    image:
+      "https://commons.wikimedia.org/wiki/Special:Redirect/file/Caftan_Ntaa_-_Maroc.jpg",
+
+    available:true
+  },
+
+
+  {
+    name:"تكشيطة مغربية",
+    category:"تكاشط",
+    price:"250 DH",
+
+    desc:
+      "تكشيطة مغربية تقليدية مناسبة للأعراس والمناسبات.",
+
+    image:
+      "https://commons.wikimedia.org/wiki/Special:Redirect/file/Takshita.jpg",
+
+    available:true
+  },
+
+
+  {
+    name:"تكشيطة مغربية أنيقة",
+    category:"تكاشط",
+    price:"230 DH",
+
+    desc:
+      "إطلالة مغربية فاخرة بتفاصيل تقليدية.",
+
+    image:
+      "https://commons.wikimedia.org/wiki/Special:Redirect/file/Tkchita.jpg",
+
+    available:true
+  },
+
+
+  {
+    name:"جلابة مغربية",
+    category:"جلابة",
+    price:"180 DH",
+
+    desc:
+      "جلابة مغربية أصيلة مناسبة للاستعمال اليومي والمناسبات.",
+
+    image:
+      "https://commons.wikimedia.org/wiki/Special:Redirect/file/Moroccan_djellaba.jpg",
+
+    available:true
+  },
+
+
+  {
+    name:"جلابة مغربية تقليدية",
+    category:"جلابة",
+    price:"200 DH",
+
+    desc:
+      "جلابة بطابع مغربي أصيل مع القلنسوة التقليدية.",
+
+    image:
+      "https://commons.wikimedia.org/wiki/Special:Redirect/file/He_wearing_a_traditional_Moroccan_djellaba.jpg",
+
+    available:true
+  },
+
+
+  {
+    name:"جابادور مغربي",
+    category:"جابادور",
+    price:"200 DH",
+
+    desc:
+      "جابادور رجالي مغربي للمناسبات والأعياد والأعراس.",
+
+    image:
+      "https://commons.wikimedia.org/wiki/Special:Redirect/file/Traditional_clothing_in_Morocco-5.jpg",
+
+    available:true
+  },
+
+
+  {
+    name:"جابادور مغربي أصيل",
+    category:"جابادور",
+    price:"220 DH",
+
+    desc:
+      "تصميم مستوحى من اللباس الرجالي المغربي التقليدي.",
+
+    image:
+      "https://commons.wikimedia.org/wiki/Special:Redirect/file/Traditional_clothing_in_Morocco-4.jpg",
+
+    available:true
+  }
+
+];
+
+
+/* =====================================================
+   الإكسسوارات المغربية
+   ===================================================== */
+
+const accessories = [
+
+  {
+    name:"بلغة مغربية تقليدية",
+    category:"أحذية",
+    price:"120 DH",
+
+    desc:
+      "بلغة مغربية تقليدية من الجلد، مناسبة مع القفطان والجلابة.",
+
+    image:
+      "https://commons.wikimedia.org/wiki/Special:Redirect/file/Moroccan_traditional_babouches.jpg",
+
+    available:true
+  },
+
+
+  {
+    name:"بلغة مغربية فاخرة",
+    category:"أحذية",
+    price:"150 DH",
+
+    desc:
+      "بلغة مغربية أنيقة بتفاصيل تقليدية.",
+
+    image:
+      "https://commons.wikimedia.org/wiki/Special:Redirect/file/Babouche_marocaine_Air_babouche.jpg",
+
+    available:true
+  },
+
+
+  {
+    name:"بلغة باللون العنابي",
+    category:"أحذية",
+    price:"130 DH",
+
+    desc:
+      "بلغة مغربية تقليدية من الجلد العنابي.",
+
+    image:
+      "https://commons.wikimedia.org/wiki/Special:Redirect/file/Moroccan_babouche,_burgundy_leather_with_silver_sequins,_20th_century_-_Bata_Shoe_Museum_-_DSC00131.JPG",
+
+    available:true
+  },
+
+
+  {
+    name:"بلغة خضراء تقليدية",
+    category:"أحذية",
+    price:"140 DH",
+
+    desc:
+      "بلغة بطابع مغربي تقليدي باللون الأخضر.",
+
+    image:
+      "https://commons.wikimedia.org/wiki/Special:Redirect/file/Moroccan_babouche,_green_velvet_with_silver_thread,_20th_century_-_Bata_Shoe_Museum_-_DSC00124.JPG",
+
+    available:true
+  },
+
+
+  {
+    name:"حزام مغربي للقفطان",
+    category:"أحزمة",
+    price:"180 DH",
+
+    desc:
+      "حزام تقليدي لإكمال إطلالة القفطان والتكشيطة.",
+
+    image:
+      "https://commons.wikimedia.org/wiki/Special:Redirect/file/Caftan,_c._1960,_Morocco.jpg",
+
+    available:true
+  },
+
+
+  {
+    name:"إكسسوار مغربي فاخر",
+    category:"مجوهرات",
+    price:"200 DH",
+
+    desc:
+      "إكسسوار مستوحى من المجوهرات المغربية التقليدية.",
+
+    image:
+      "https://commons.wikimedia.org/wiki/Special:Redirect/file/Moroccan_Caftan.jpg",
+
+    available:true
+  },
+
+
+  {
+    name:"تاج مغربي للعروس",
+    category:"تيجان",
+    price:"220 DH",
+
+    desc:
+      "تاج مستوحى من إطلالة العروس المغربية التقليدية.",
+
+    image:
+      "https://commons.wikimedia.org/wiki/Special:Redirect/file/Takshita.jpg",
+
+    available:true
+  }
+
+];
+
+
+/* =====================================================
+   واتساب
+   ===================================================== */
+
+const WA =
+  "212617143753";
+
+
+/* =====================================================
+   رسالة واتساب
+   ===================================================== */
+
+function waMessage(product,type){
+
+  const verb =
+    type === "accessory"
+
+    ? "بغيت نسول على هاد الإكسسوار"
+
+    : "بغيت نسول على هاد الموديل";
+
+
+  return `
+
+السلام عليكم 🌸
+
+${verb}: ${product.name}
+
+الثمن: ${product.price}
+
+واش مازال متوفر؟
+
+وبغيت نعرف واش متاح للبيع أو الكراء.
+
+وشكراً بزاف 🙏
+
+`;
+
+}
+
+
+/* =====================================================
+   بطاقة المنتج
+   ===================================================== */
+
+function card(product,type){
+
+  const image = product.image
+
+    ? `<img
+         src="${product.image}"
+         alt="${product.name}"
+         loading="lazy"
+         onerror="this.style.display='none';this.parentElement.classList.add('image-error')"
+       >`
+
+    : `<div
+         style="
+           height:100%;
+           display:grid;
+           place-items:center;
+           font-size:70px;
+         ">
+         👗
+       </div>`;
+
+
+  const buttonText =
+    type === "accessory"
+
+    ? "💬 نسول على هاد الإكسسوار"
+
+    : "💬 نسول على هاد الموديل";
+
+
+  return `
+
+  <article
+    class="card"
+    data-category="${product.category}"
+    data-name="${product.name}">
+
+
+    <div class="product-img">
+
+      ${image}
+
+
+      ${
+        product.available
+
+        ? '<span class="tag">متاح</span>'
+
+        : '<span class="tag" style="background:#888">غير متاح</span>'
+      }
+
+
+    </div>
+
+
+    <div class="card-body">
+
+
+      <h3>
+        ${product.name}
+      </h3>
+
+
+      <div class="price">
+        ${product.price}
+      </div>
+
+
+      <p class="desc">
+        ${product.desc}
+      </p>
+
+
+      <a
+        class="order"
+        target="_blank"
+        href="https://wa.me/${WA}?text=${encodeURIComponent(
+          waMessage(product,type)
+        )}">
+
+        ${buttonText}
+
+      </a>
+
+
+    </div>
+
+
+  </article>
+
+  `;
+
+}
+
+
+/* =====================================================
+   عرض المنتجات
+   ===================================================== */
+
+function render(data,id,type){
+
+  document.getElementById(id).innerHTML =
+    data
+      .map(p => card(p,type))
+      .join("");
+
+}
+
+
+render(
+  clothes,
+  "clothesGrid",
+  "clothes"
+);
+
+
+render(
+  accessories,
+  "accessoriesGrid",
+  "accessory"
+);
+
+
+/* =====================================================
+   الفلاتر
+   ===================================================== */
+
+function setupFilters(
+  containerId,
+  data,
+  gridId,
+  type
+){
+
+  document
+    .querySelectorAll(
+      `#${containerId} .filter`
+    )
+    .forEach(btn => {
+
+
+      btn.addEventListener(
+        "click",
+        ()=>{
+
+
+          document
+            .querySelectorAll(
+              `#${containerId} .filter`
+            )
+            .forEach(b =>
+              b.classList.remove("active")
+            );
+
+
+          btn.classList.add("active");
+
+
+          const value =
+            btn.dataset.filter;
+
+
+          render(
+
+            value === "all"
+
+              ? data
+
+              : data.filter(
+                  p =>
+                    p.category === value
+                ),
+
+            gridId,
+
+            type
+
+          );
+
+        }
+      );
+
+    });
+
+}
+
+
+setupFilters(
+  "clothesFilters",
+  clothes,
+  "clothesGrid",
+  "clothes"
+);
+
+
+setupFilters(
+  "accessoryFilters",
+  accessories,
+  "accessoriesGrid",
+  "accessory"
+);
+
+
+/* =====================================================
+   البحث
+   ===================================================== */
+
+document
+  .getElementById("clothesSearch")
+  .addEventListener(
+    "input",
+    e => {
+
+
+      const q =
+        e.target.value
+          .trim()
+          .toLowerCase();
+
+
+      render(
+
+        clothes.filter(p =>
+          (
+            p.name +
+            " " +
+            p.category +
+            " " +
+            p.desc
+          )
+          .toLowerCase()
+          .includes(q)
+        ),
+
+        "clothesGrid",
+
+        "clothes"
+
+      );
+
+    }
+  );
+
+</script>
+
+</body>
+
+</html>
 ```
-
-بهذا سيصبح البانر أكثر ارتباطًا بهوية **قفطان ليلى**، بدل الصورة السابقة التي كانت أقرب إلى فستان سهرة غربي.
-
-**لكن لدي اقتراح أفضل للنسخة النهائية:** بدل استخدام صورة من الإنترنت، يمكننا جعل البانر يعتمد على **صورة قفطان مغربي حقيقية من منتجات المحل**؛ نضع صورة القفطان على اليمين، واسم **قفطان ليلى** والشعار والوصف على اليسار، ليبدو الموقع كمتجر احترافي حقيقي وليس قالبًا جاهزًا.
