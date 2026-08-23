@@ -1,292 +1,2249 @@
-/* =========================
-   HERO - DESKTOP + MOBILE
-========================= */
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
 
-.hero{
-  min-height:650px;
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<meta name="description"
+      content="قفطان ليلى - بيع وكراء القفاطين والتكاشط المغربية والإكسسوارات في زواغة العليا، فاس">
+
+<title>قفطان ليلى | Caftan Layla</title>
+
+<style>
+
+/* =====================================================
+   المتغيرات
+===================================================== */
+
+:root{
+
+  --wine:#4b102f;
+  --wine-dark:#2b071b;
+  --wine2:#741e4d;
+
+  --gold:#c9a24d;
+  --gold-light:#f0d78e;
+
+  --cream:#fffaf4;
+  --cream2:#f7eee5;
+
+  --green:#18b957;
+
+  --text:#30242b;
+  --muted:#766b72;
+
+  --white:#ffffff;
+}
+
+
+/* =====================================================
+   RESET
+===================================================== */
+
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+html{
   width:100%;
   max-width:100%;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-  padding:80px 20px;
-  position:relative;
-  overflow:hidden;
+  overflow-x:hidden;
+  scroll-behavior:smooth;
+}
+
+body{
+  width:100%;
+  max-width:100%;
+  overflow-x:hidden;
+
+  font-family:
+    Tahoma,
+    Arial,
+    sans-serif;
+
+  background:var(--cream);
+  color:var(--text);
+
+  line-height:1.7;
+}
+
+img{
+  max-width:100%;
+}
+
+a{
+  text-decoration:none;
+  color:inherit;
+}
+
+
+/* =====================================================
+   TOP BAR
+===================================================== */
+
+.topbar{
+
+  width:100%;
 
   background:
     linear-gradient(
       90deg,
-      rgba(38,6,25,.82),
+      #250717,
+      #551333,
+      #250717
+    );
+
+  color:#fff;
+
+  padding:8px 5%;
+
+  display:flex;
+
+  justify-content:space-between;
+
+  align-items:center;
+
+  gap:15px;
+
+  font-size:13px;
+}
+
+.topbar span{
+
+  display:flex;
+
+  align-items:center;
+
+  gap:7px;
+}
+
+
+/* =====================================================
+   NAVIGATION
+===================================================== */
+
+nav{
+
+  position:sticky;
+
+  top:0;
+
+  z-index:100;
+
+  width:100%;
+
+  background:
+    rgba(255,250,244,.97);
+
+  backdrop-filter:blur(10px);
+
+  border-bottom:
+    1px solid #e5d6c6;
+
+  padding:11px 5%;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:space-between;
+}
+
+.brand{
+
+  display:flex;
+
+  align-items:center;
+
+  gap:10px;
+
+  font-weight:900;
+
+  color:var(--wine);
+
+  font-size:20px;
+}
+
+.brand-mark{
+
+  width:46px;
+
+  height:46px;
+
+  border:
+    2px solid var(--gold);
+
+  border-radius:50%;
+
+  display:grid;
+
+  place-items:center;
+
+  color:var(--gold);
+
+  font-size:23px;
+
+  background:#fff;
+
+  box-shadow:
+    0 3px 12px
+    rgba(80,30,50,.12);
+}
+
+nav .links{
+
+  display:flex;
+
+  align-items:center;
+
+  gap:25px;
+
+  font-weight:700;
+
+  font-size:14px;
+}
+
+nav .links a{
+
+  transition:.2s;
+}
+
+nav .links a:hover{
+
+  color:var(--wine2);
+}
+
+
+/* =====================================================
+   HERO / BANNER
+===================================================== */
+
+.hero{
+
+  width:100%;
+
+  min-height:650px;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  text-align:center;
+
+  padding:80px 20px;
+
+  position:relative;
+
+  overflow:hidden;
+
+  background:
+
+    linear-gradient(
+      90deg,
+      rgba(35,5,23,.84),
       rgba(65,10,39,.48),
-      rgba(38,6,25,.78)
+      rgba(35,5,23,.78)
     ),
-    url("YOUR-BANNER-IMAGE.jpg");
+
+    url("images/banner-takchita.jpg");
 
   background-size:cover;
+
   background-repeat:no-repeat;
+
   background-position:center center;
 }
 
+
+/* إطار فاخر */
+
+.hero::before{
+
+  content:"";
+
+  position:absolute;
+
+  inset:22px;
+
+  border:
+    1px solid
+    rgba(240,215,142,.65);
+
+  pointer-events:none;
+
+  z-index:1;
+}
+
+
+/* زخرفة */
+
+.hero::after{
+
+  content:"✦";
+
+  position:absolute;
+
+  left:-170px;
+
+  bottom:-260px;
+
+  width:430px;
+
+  height:430px;
+
+  border:
+    1px solid
+    rgba(240,215,142,.25);
+
+  border-radius:50%;
+
+  display:grid;
+
+  place-items:center;
+
+  color:
+    rgba(240,215,142,.25);
+
+  font-size:90px;
+}
+
 .hero-content{
+
   position:relative;
+
   z-index:2;
+
   width:100%;
+
   max-width:900px;
+
   margin:auto;
+
   color:#fff;
+}
+
+.logo-icon{
+
+  font-size:58px;
+
+  color:var(--gold-light);
+
+  margin-bottom:3px;
+
+  text-shadow:
+    0 4px 15px rgba(0,0,0,.7);
 }
 
 .hero h1{
-  font-size:clamp(42px,7vw,82px);
+
+  font-size:
+    clamp(42px,7vw,82px);
+
   color:#fff;
+
   line-height:1.1;
-  margin-bottom:8px;
-  text-shadow:0 4px 20px rgba(0,0,0,.7);
+
+  margin-bottom:7px;
+
+  text-shadow:
+    0 4px 20px rgba(0,0,0,.75);
 }
 
 .latin{
+
   font-family:Georgia,serif;
-  font-size:clamp(22px,3vw,31px);
-  color:#f0d58c;
+
+  font-size:
+    clamp(22px,3vw,31px);
+
+  color:var(--gold-light);
+
   letter-spacing:2px;
+
   margin-bottom:15px;
 }
 
 .hero p{
-  font-size:clamp(17px,2.5vw,25px);
+
+  font-size:
+    clamp(17px,2.5vw,25px);
+
   font-weight:700;
-  margin-bottom:15px;
+
+  margin-bottom:13px;
+
+  text-shadow:
+    0 2px 10px rgba(0,0,0,.7);
 }
 
 .address{
+
   font-size:14px;
+
   color:#f8e7bd;
+
   margin-bottom:28px;
 }
 
 .buttons{
+
   width:100%;
+
   display:flex;
+
   justify-content:center;
+
   align-items:center;
+
   flex-wrap:wrap;
+
   gap:12px;
 }
 
 .btn{
+
   display:inline-flex;
+
   align-items:center;
+
   justify-content:center;
+
   gap:8px;
-  padding:13px 24px;
+
+  padding:13px 25px;
+
   border-radius:30px;
+
   font-weight:800;
+
+  transition:.25s;
+
   max-width:100%;
 }
 
+.btn:hover{
 
-/* =========================
+  transform:
+    translateY(-3px);
+}
+
+.btn-main{
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--gold),
+      var(--gold-light)
+    );
+
+  color:var(--wine-dark);
+
+  box-shadow:
+    0 6px 20px
+    rgba(0,0,0,.25);
+}
+
+.btn-wa{
+
+  background:var(--green);
+
+  color:#fff;
+
+  box-shadow:
+    0 6px 20px
+    rgba(0,0,0,.2);
+}
+
+
+/* =====================================================
+   SECTIONS
+===================================================== */
+
+section{
+
+  width:100%;
+
+  max-width:1250px;
+
+  margin:auto;
+
+  padding:65px 5%;
+}
+
+.section-title{
+
+  text-align:center;
+
+  color:var(--wine);
+
+  font-size:32px;
+
+  margin-bottom:8px;
+}
+
+.section-sub{
+
+  text-align:center;
+
+  color:var(--muted);
+
+  margin-bottom:30px;
+}
+
+
+/* =====================================================
+   SEARCH
+===================================================== */
+
+.search{
+
+  width:100%;
+
+  max-width:430px;
+
+  margin:
+    0 auto 25px;
+
+  display:flex;
+
+  background:#fff;
+
+  border:
+    1px solid #e1d5c9;
+
+  border-radius:28px;
+
+  overflow:hidden;
+
+  box-shadow:
+    0 5px 20px
+    rgba(80,30,50,.06);
+}
+
+.search input{
+
+  width:100%;
+
+  min-width:0;
+
+  border:0;
+
+  outline:0;
+
+  padding:13px 18px;
+
+  font-family:inherit;
+
+  font-size:14px;
+}
+
+
+/* =====================================================
+   FILTERS
+===================================================== */
+
+.filters{
+
+  width:100%;
+
+  display:flex;
+
+  gap:8px;
+
+  flex-wrap:wrap;
+
+  justify-content:center;
+
+  margin:
+    20px 0 30px;
+}
+
+.filter{
+
+  border:
+    1px solid #e2d5c7;
+
+  background:#fff;
+
+  padding:
+    8px 18px;
+
+  border-radius:22px;
+
+  cursor:pointer;
+
+  font-weight:700;
+
+  transition:.2s;
+
+  white-space:nowrap;
+}
+
+.filter.active,
+.filter:hover{
+
+  background:var(--wine);
+
+  color:#fff;
+
+  border-color:var(--wine);
+}
+
+
+/* =====================================================
+   PRODUCT GRID
+===================================================== */
+
+.grid{
+
+  width:100%;
+
+  display:grid;
+
+  grid-template-columns:
+    repeat(
+      auto-fit,
+      minmax(220px,1fr)
+    );
+
+  gap:22px;
+}
+
+
+/* =====================================================
+   PRODUCT CARD
+===================================================== */
+
+.card{
+
+  width:100%;
+
+  min-width:0;
+
+  background:#fff;
+
+  border:
+    1px solid #eadfd5;
+
+  border-radius:20px;
+
+  overflow:hidden;
+
+  box-shadow:
+    0 8px 28px
+    rgba(76,40,54,.08);
+
+  transition:.25s;
+}
+
+.card:hover{
+
+  transform:
+    translateY(-5px);
+
+  box-shadow:
+    0 15px 35px
+    rgba(76,40,54,.15);
+}
+
+
+/* =====================================================
+   PRODUCT IMAGE
+===================================================== */
+
+.product-img{
+
+  width:100%;
+
+  height:300px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #f5e5d8,
+      #e7c9bb
+    );
+
+  position:relative;
+
+  overflow:hidden;
+}
+
+.product-img img{
+
+  width:100%;
+
+  height:100%;
+
+  display:block;
+
+  object-fit:cover;
+
+  transition:.4s;
+}
+
+.card:hover
+.product-img img{
+
+  transform:
+    scale(1.05);
+}
+
+.tag{
+
+  position:absolute;
+
+  top:12px;
+
+  right:12px;
+
+  background:var(--green);
+
+  color:#fff;
+
+  border-radius:15px;
+
+  padding:
+    4px 12px;
+
+  font-size:12px;
+
+  font-weight:800;
+
+  box-shadow:
+    0 3px 10px
+    rgba(0,0,0,.15);
+}
+
+
+/* =====================================================
+   CARD BODY
+===================================================== */
+
+.card-body{
+
+  width:100%;
+
+  padding:17px;
+}
+
+.card h3{
+
+  color:var(--wine);
+
+  font-size:19px;
+
+  line-height:1.5;
+}
+
+.price{
+
+  font-size:21px;
+
+  font-weight:900;
+
+  color:var(--gold);
+
+  margin:
+    4px 0;
+}
+
+.desc{
+
+  font-size:13px;
+
+  color:var(--muted);
+
+  min-height:45px;
+}
+
+.order{
+
+  width:100%;
+
+  margin-top:13px;
+
+  background:var(--green);
+
+  color:#fff;
+
+  padding:11px;
+
+  border-radius:25px;
+
+  display:block;
+
+  text-align:center;
+
+  font-weight:800;
+
+  transition:.2s;
+}
+
+.order:hover{
+
+  background:#119a47;
+
+  transform:
+    translateY(-2px);
+}
+
+
+/* =====================================================
+   INFORMATION
+===================================================== */
+
+.info{
+
+  width:100%;
+
+  background:
+    linear-gradient(
+      120deg,
+      var(--wine),
+      #7d315c
+    );
+
+  color:#fff;
+
+  border-radius:25px;
+
+  padding:38px;
+
+  display:grid;
+
+  grid-template-columns:
+    repeat(
+      auto-fit,
+      minmax(220px,1fr)
+    );
+
+  gap:25px;
+
+  box-shadow:
+    0 15px 35px
+    rgba(70,20,50,.15);
+}
+
+.info-item{
+
+  text-align:center;
+}
+
+.info-item .icon{
+
+  font-size:30px;
+}
+
+.info-item h3{
+
+  color:#f5dca9;
+
+  margin:
+    4px 0;
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer{
+
+  width:100%;
+
+  background:#321127;
+
+  color:#fff;
+
+  padding:40px 5%;
+
+  text-align:center;
+}
+
+footer .brand{
+
+  justify-content:center;
+
+  color:#fff;
+
+  margin-bottom:10px;
+}
+
+.social{
+
+  margin-top:15px;
+
+  display:flex;
+
+  justify-content:center;
+
+  gap:10px;
+
+  flex-wrap:wrap;
+}
+
+.social a{
+
+  border:
+    1px solid
+    rgba(255,255,255,.3);
+
+  padding:
+    7px 15px;
+
+  border-radius:20px;
+}
+
+.note{
+
+  text-align:center;
+
+  color:#cdbec5;
+
+  font-size:12px;
+
+  margin-top:25px;
+}
+
+
+/* =====================================================
    MOBILE
-========================= */
+===================================================== */
 
 @media screen and (max-width:700px){
 
   html,
   body{
+
     width:100%;
+
     max-width:100%;
+
     overflow-x:hidden;
   }
 
-  nav{
+
+  /* TOP BAR */
+
+  .topbar{
+
     width:100%;
-    padding:10px 15px;
+
+    padding:
+      8px 10px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    text-align:center;
+
+    gap:3px;
+
+    font-size:10px;
+  }
+
+
+  /* NAV */
+
+  nav{
+
+    width:100%;
+
+    padding:
+      9px 14px;
   }
 
   nav .links{
+
     display:none;
   }
 
   .brand{
+
     font-size:18px;
   }
 
-  .topbar{
-    width:100%;
-    padding:8px 10px;
-    display:flex;
-    flex-direction:column;
-    text-align:center;
-    gap:3px;
-    font-size:10px;
+  .brand-mark{
+
+    width:42px;
+
+    height:42px;
+
+    font-size:20px;
   }
 
-  /* البانر في الهاتف */
+
+  /* HERO */
 
   .hero{
+
     width:100%;
+
     min-height:560px;
-    padding:55px 18px;
+
+    padding:
+      55px 18px;
 
     background-size:cover;
 
-    /*
-      تغيير موضع الصورة على الهاتف
-      حتى تبقى المرأة ظاهرة بشكل جيد
-    */
-    background-position:center center;
+    background-position:
+      center center;
+  }
+
+  .hero::before{
+
+    inset:14px;
   }
 
   .hero-content{
+
     width:100%;
+
     max-width:100%;
-    padding:0;
   }
 
   .logo-icon{
+
     font-size:42px;
   }
 
   .hero h1{
+
     font-size:46px;
+
     line-height:1.15;
   }
 
   .latin{
-    font-size:23px;
+
+    font-size:22px;
+
     letter-spacing:1px;
   }
 
   .hero p{
+
     font-size:17px;
+
     line-height:1.7;
   }
 
   .address{
+
     font-size:12px;
+
     line-height:1.8;
   }
 
+
+  /* BUTTONS */
+
   .buttons{
+
     width:100%;
+
     flex-direction:column;
+
     gap:10px;
   }
 
   .btn{
+
     width:100%;
+
     max-width:320px;
-    padding:13px 18px;
+
+    padding:
+      13px 18px;
   }
 
+
+  /* SECTIONS */
+
   section{
+
     width:100%;
+
     max-width:100%;
-    padding:45px 15px;
+
+    padding:
+      45px 15px;
+
     overflow:hidden;
   }
 
   .section-title{
+
     font-size:27px;
+
     line-height:1.4;
   }
 
   .section-sub{
+
     font-size:13px;
+
     line-height:1.8;
   }
 
-  .filters{
+
+  /* SEARCH */
+
+  .search{
+
     width:100%;
-    overflow-x:auto;
+
+    max-width:100%;
+  }
+
+
+  /* FILTERS */
+
+  .filters{
+
+    width:100%;
+
     justify-content:flex-start;
+
     flex-wrap:nowrap;
-    padding:5px 2px 12px;
+
+    overflow-x:auto;
+
+    padding:
+      5px 2px 12px;
+
     scrollbar-width:none;
   }
 
   .filters::-webkit-scrollbar{
+
     display:none;
   }
 
   .filter{
-    flex:0 0 auto;
-    white-space:nowrap;
+
+    flex:
+      0 0 auto;
   }
 
-  .search{
-    width:100%;
-    max-width:100%;
-  }
+
+  /* GRID */
 
   .grid{
+
     width:100%;
-    display:grid;
+
     grid-template-columns:1fr;
+
     gap:18px;
   }
 
+
+  /* CARD */
+
   .card{
+
     width:100%;
+
     max-width:100%;
   }
 
   .product-img{
+
     width:100%;
+
     height:330px;
   }
 
   .product-img img{
+
     width:100%;
+
     height:100%;
+
     object-fit:cover;
   }
 
-  .card-body{
-    padding:15px;
-  }
+
+  /* INFO */
 
   .info{
+
     width:100%;
-    padding:25px 18px;
+
+    padding:
+      25px 18px;
+
     grid-template-columns:1fr;
+
     border-radius:20px;
   }
 
+
+  /* FOOTER */
+
   footer{
+
     width:100%;
-    padding:35px 15px;
+
+    padding:
+      35px 15px;
   }
 
 }
 
 
-/* =========================
-   شاشات صغيرة جدًا
-========================= */
+/* =====================================================
+   SMALL PHONES
+===================================================== */
 
 @media screen and (max-width:380px){
 
   .hero{
+
     min-height:530px;
-    padding:45px 14px;
+
+    padding:
+      45px 14px;
   }
 
   .hero h1{
+
     font-size:40px;
   }
 
   .latin{
+
     font-size:20px;
   }
 
   .hero p{
+
     font-size:15px;
   }
 
   .product-img{
+
     height:300px;
   }
 
 }
+
+
+/* =====================================================
+   EXTRA SAFETY
+   منع أي عنصر من تجاوز الشاشة
+===================================================== */
+
+section,
+header,
+nav,
+footer,
+main,
+.card,
+.grid,
+.info,
+.search{
+
+  max-width:100%;
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     TOP BAR
+===================================================== -->
+
+<div class="topbar">
+
+  <span>
+    📍 طريق عين السمن 18 مكرر، بلوك ب، الوفاق، زواغة العليا
+  </span>
+
+  <span>
+    📞 0617143753 | 0614445648
+  </span>
+
+</div>
+
+
+<!-- =====================================================
+     NAVIGATION
+===================================================== -->
+
+<nav>
+
+  <a
+    class="brand"
+    href="#home">
+
+    <span class="brand-mark">
+      ✦
+    </span>
+
+    <span>
+      قفطان ليلى
+    </span>
+
+  </a>
+
+
+  <div class="links">
+
+    <a href="#home">
+      الرئيسية
+    </a>
+
+    <a href="#clothes">
+      القفاطين والتكاشط
+    </a>
+
+    <a href="#accessories">
+      الإكسسوارات
+    </a>
+
+    <a href="#contact">
+      تواصل معنا
+    </a>
+
+  </div>
+
+</nav>
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<header
+  class="hero"
+  id="home">
+
+  <div class="hero-content">
+
+    <div class="logo-icon">
+      ✦
+    </div>
+
+    <h1>
+      قفطان ليلى
+    </h1>
+
+    <div class="latin">
+      CAFTAN LAYLA
+    </div>
+
+    <p>
+      أناقة مغربية أصيلة بلمسة عصرية
+    </p>
+
+    <div class="address">
+
+      ✨ قفاطين • تكاشط • إكسسوارات ✨
+
+      <br>
+
+      زواغة العليا - فاس
+
+    </div>
+
+
+    <div class="buttons">
+
+      <a
+        class="btn btn-main"
+        href="#clothes">
+
+        👗 اكتشفي التشكيلة
+
+      </a>
+
+
+      <a
+        class="btn btn-wa"
+        target="_blank"
+        href="https://wa.me/212617143753?text=السلام%20عليكم%20🌸%20بغيت%20نسول%20على%20شي%20موديل%20من%20عند%20قفطان%20ليلى">
+
+        💬 تواصلي معنا عبر واتساب
+
+      </a>
+
+    </div>
+
+  </div>
+
+</header>
+
+
+<main>
+
+
+<!-- =====================================================
+     CLOTHES
+===================================================== -->
+
+<section id="clothes">
+
+  <h2 class="section-title">
+    القفاطين والتكاشط 👗
+  </h2>
+
+  <p class="section-sub">
+    موديلات مغربية أنيقة للمناسبات والأعراس
+  </p>
+
+
+  <div class="search">
+
+    <input
+      id="clothesSearch"
+      type="search"
+      placeholder="🔎 قلّبي على موديل...">
+
+  </div>
+
+
+  <div
+    class="filters"
+    id="clothesFilters">
+
+    <button
+      class="filter active"
+      data-filter="all">
+
+      الكل
+
+    </button>
+
+    <button
+      class="filter"
+      data-filter="قفاطين">
+
+      قفاطين
+
+    </button>
+
+    <button
+      class="filter"
+      data-filter="تكاشط">
+
+      تكاشط
+
+    </button>
+
+  </div>
+
+
+  <div
+    class="grid"
+    id="clothesGrid">
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     ACCESSORIES
+===================================================== -->
+
+<section id="accessories">
+
+  <h2 class="section-title">
+    إكسسوارات القفطان والتكشيطة 💎
+  </h2>
+
+  <p class="section-sub">
+    لمسات مغربية تكمل أناقتك
+  </p>
+
+
+  <div
+    class="filters"
+    id="accessoryFilters">
+
+    <button
+      class="filter active"
+      data-filter="all">
+
+      الكل
+
+    </button>
+
+
+    <button
+      class="filter"
+      data-filter="مجوهرات">
+
+      مجوهرات مغربية
+
+    </button>
+
+
+    <button
+      class="filter"
+      data-filter="أحزمة">
+
+      أحزمة ومضمة
+
+    </button>
+
+
+    <button
+      class="filter"
+      data-filter="شربيل">
+
+      شربيل وبلغة
+
+    </button>
+
+
+    <button
+      class="filter"
+      data-filter="تيجان">
+
+      تيجان
+
+    </button>
+
+  </div>
+
+
+  <div
+    class="grid"
+    id="accessoriesGrid">
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     WHY US
+===================================================== -->
+
+<section id="contact">
+
+  <h2 class="section-title">
+    علاش قفطان ليلى؟ ✨
+  </h2>
+
+  <p class="section-sub">
+    أصالة مغربية وأناقة تليق بالمناسبات
+  </p>
+
+
+  <div class="info">
+
+
+    <div class="info-item">
+
+      <div class="icon">
+        🇲🇦
+      </div>
+
+      <h3>
+        هوية مغربية
+      </h3>
+
+      <p>
+        أزياء مستوحاة من القفطان والتكشيطة المغربية الأصيلة.
+      </p>
+
+    </div>
+
+
+    <div class="info-item">
+
+      <div class="icon">
+        👗
+      </div>
+
+      <h3>
+        بيع وكراء
+      </h3>
+
+      <p>
+        اختاري الموديل المناسب ليك واسولي على البيع أو الكراء.
+      </p>
+
+    </div>
+
+
+    <div class="info-item">
+
+      <div class="icon">
+        📍
+      </div>
+
+      <h3>
+        موقع المحل
+      </h3>
+
+      <p>
+        طريق عين السمن 18 مكرر، بلوك ب، الوفاق، زواغة العليا.
+      </p>
+
+    </div>
+
+
+    <div class="info-item">
+
+      <div class="icon">
+        💬
+      </div>
+
+      <h3>
+        تواصل سريع
+      </h3>
+
+      <p>
+        تواصلي معنا عبر واتساب لمعرفة المقاسات والتوفر.
+      </p>
+
+    </div>
+
+
+  </div>
+
+</section>
+
+</main>
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+  <div class="brand">
+
+    <span class="brand-mark">
+      ✦
+    </span>
+
+    <span>
+      قفطان ليلى
+    </span>
+
+  </div>
+
+
+  <p>
+    بيع وكراء القفاطين والتكاشط المغربية والإكسسوارات
+  </p>
+
+
+  <p>
+    📞 0617143753 | 0614445648
+  </p>
+
+
+  <div class="social">
+
+    <a
+      target="_blank"
+      href="https://wa.me/212617143753">
+
+      واتساب 1
+
+    </a>
+
+
+    <a
+      target="_blank"
+      href="https://wa.me/212614445648">
+
+      واتساب 2
+
+    </a>
+
+  </div>
+
+
+  <div class="note">
+
+    © 2026 قفطان ليلى - جميع الحقوق محفوظة
+
+  </div>
+
+</footer>
+
+
+<script>
+
+/* =====================================================
+   صورة البانر
+===================================================== */
+
+/*
+   ضع صورة البانر هنا:
+
+   images/banner-takchita.jpg
+
+   ويجب أن تكون الصورة:
+   امرأة ترتدي تكشيطة مغربية فاخرة
+   جالسة على أريكة فخمة.
+*/
+
+
+const BANNER_IMAGE =
+"images/banner-takchita.jpg";
+
+
+/*
+   تطبيق صورة البانر
+*/
+
+document.querySelector(".hero").style.backgroundImage =
+
+`linear-gradient(
+  90deg,
+  rgba(35,5,23,.84),
+  rgba(65,10,39,.48),
+  rgba(35,5,23,.78)
+),
+url("${BANNER_IMAGE}")`;
+
+
+/* =====================================================
+   PRODUCTS
+===================================================== */
+
+const clothes = [
+
+
+  {
+    name:"قفطان مغربي فاخر",
+
+    category:"قفاطين",
+
+    price:"250 DH",
+
+    desc:
+      "قفطان مغربي أنيق للمناسبات والأعراس.",
+
+    image:
+      "images/caftan-1.jpg",
+
+    available:true
+  },
+
+
+  {
+    name:"قفطان مغربي مطرز",
+
+    category:"قفاطين",
+
+    price:"240 DH",
+
+    desc:
+      "قفطان بتطريز مغربي راق ولمسة فاخرة.",
+
+    image:
+      "images/caftan-2.jpg",
+
+    available:true
+  },
+
+
+  {
+    name:"قفطان مغربي عصري",
+
+    category:"قفاطين",
+
+    price:"220 DH",
+
+    desc:
+      "تصميم عصري مستوحى من الأزياء المغربية.",
+
+    image:
+      "images/caftan-3.jpg",
+
+    available:true
+  },
+
+
+  {
+    name:"تكشيطة مغربية فاخرة",
+
+    category:"تكاشط",
+
+    price:"250 DH",
+
+    desc:
+      "تكشيطة مغربية فاخرة للمناسبات والأعراس.",
+
+    image:
+      "images/takchita-1.jpg",
+
+    available:true
+  },
+
+
+  {
+    name:"تكشيطة مغربية أنيقة",
+
+    category:"تكاشط",
+
+    price:"230 DH",
+
+    desc:
+      "تكشيطة بتفاصيل مغربية راقية.",
+
+    image:
+      "images/takchita-2.jpg",
+
+    available:true
+  },
+
+
+  {
+    name:"تكشيطة بالتطريز المغربي",
+
+    category:"تكاشط",
+
+    price:"220 DH",
+
+    desc:
+      "تصميم أنيق مستوحى من التراث المغربي.",
+
+    image:
+      "images/takchita-3.jpg",
+
+    available:true
+  }
+
+];
+
+
+/* =====================================================
+   ACCESSORIES
+===================================================== */
+
+const accessories = [
+
+
+  {
+    name:"طقم مجوهرات مغربية",
+
+    category:"مجوهرات",
+
+    price:"220 DH",
+
+    desc:
+      "طقم أنيق يليق بالقفطان والتكشيطة.",
+
+    image:
+      "images/jewelry-1.jpg",
+
+    available:true
+  },
+
+
+  {
+    name:"عقد مغربي تقليدي",
+
+    category:"مجوهرات",
+
+    price:"180 DH",
+
+    desc:
+      "عقد مغربي تقليدي لإكمال الإطلالة.",
+
+    image:
+      "images/jewelry-2.jpg",
+
+    available:true
+  },
+
+
+  {
+    name:"مضمة مغربية فاخرة",
+
+    category:"أحزمة",
+
+    price:"200 DH",
+
+    desc:
+      "مضمة أنيقة تناسب القفطان والتكشيطة.",
+
+    image:
+      "images/belt-1.jpg",
+
+    available:true
+  },
+
+
+  {
+    name:"حزام ذهبي للقفطان",
+
+    category:"أحزمة",
+
+    price:"150 DH",
+
+    desc:
+      "حزام فاخر لإبراز جمال القفطان.",
+
+    image:
+      "images/belt-2.jpg",
+
+    available:true
+  },
+
+
+  {
+    name:"شربيل مغربي",
+
+    category:"شربيل",
+
+    price:"150 DH",
+
+    desc:
+      "شربيل مغربي أنيق للمناسبات.",
+
+    image:
+      "images/babouche-1.jpg",
+
+    available:true
+  },
+
+
+  {
+    name:"بلغة مغربية فاخرة",
+
+    category:"شربيل",
+
+    price:"120 DH",
+
+    desc:
+      "بلغة مغربية أنيقة تتناسب مع القفطان.",
+
+    image:
+      "images/babouche-2.jpg",
+
+    available:true
+  },
+
+
+  {
+    name:"تاج العروس المغربية",
+
+    category:"تيجان",
+
+    price:"250 DH",
+
+    desc:
+      "تاج فاخر لإطلالة العروس المغربية.",
+
+    image:
+      "images/crown-1.jpg",
+
+    available:true
+  }
+
+];
+
+
+/* =====================================================
+   WHATSAPP
+===================================================== */
+
+const WA =
+"212617143753";
+
+
+function waMessage(product,type){
+
+  let verb =
+    "بغيت نسول على هاد الموديل";
+
+  if(type==="accessory"){
+
+    verb =
+      "بغيت نسول على هاد الإكسسوار";
+  }
+
+
+  return `السلام عليكم 🌸
+
+${verb}:
+
+${product.name}
+
+الثمن:
+${product.price}
+
+واش مازال متوفر؟
+
+وبغيت نعرف واش متاح للبيع أو الكراء.
+
+شكراً بزاف 🙏`;
+}
+
+
+/* =====================================================
+   PRODUCT CARD
+===================================================== */
+
+function card(product,type){
+
+  const image = product.image
+
+    ? `<img
+         src="${product.image}"
+         alt="${product.name}"
+         loading="lazy"
+         onerror="this.style.display='none';
+         this.parentElement.classList.add('image-error');"
+       >`
+
+    : `
+       <div
+         style="
+           height:100%;
+           display:grid;
+           place-items:center;
+           font-size:70px;
+         ">
+         👗
+       </div>
+      `;
+
+
+  const buttonText =
+    type === "accessory"
+
+      ? "💬 نسول على هاد الإكسسوار"
+
+      : "💬 نسول على هاد الموديل";
+
+
+  return `
+
+  <article
+    class="card"
+    data-category="${product.category}"
+    data-name="${product.name}">
+
+    <div class="product-img">
+
+      ${image}
+
+      ${
+        product.available
+
+        ? '<span class="tag">متاح</span>'
+
+        : '<span class="tag" style="background:#888">غير متاح</span>'
+      }
+
+    </div>
+
+
+    <div class="card-body">
+
+      <h3>
+        ${product.name}
+      </h3>
+
+
+      <div class="price">
+        ${product.price}
+      </div>
+
+
+      <p class="desc">
+        ${product.desc}
+      </p>
+
+
+      <a
+        class="order"
+        target="_blank"
+        href="https://wa.me/${WA}?text=${encodeURIComponent(
+          waMessage(product,type)
+        )}">
+
+        ${buttonText}
+
+      </a>
+
+    </div>
+
+  </article>
+
+  `;
+}
+
+
+/* =====================================================
+   RENDER
+===================================================== */
+
+function render(data,id,type){
+
+  const container =
+    document.getElementById(id);
+
+  if(!container) return;
+
+  container.innerHTML =
+    data
+      .map(p=>card(p,type))
+      .join("");
+}
+
+
+render(
+  clothes,
+  "clothesGrid",
+  "clothes"
+);
+
+render(
+  accessories,
+  "accessoriesGrid",
+  "accessory"
+);
+
+
+/* =====================================================
+   FILTERS
+===================================================== */
+
+function setupFilters(
+  containerId,
+  data,
+  gridId,
+  type
+){
+
+  const buttons =
+    document.querySelectorAll(
+      `#${containerId} .filter`
+    );
+
+
+  buttons.forEach(btn=>{
+
+    btn.addEventListener(
+      "click",
+      ()=>{
+
+        buttons.forEach(
+          b=>
+          b.classList.remove("active")
+        );
+
+
+        btn.classList.add("active");
+
+
+        const value =
+          btn.dataset.filter;
+
+
+        const result =
+          value === "all"
+
+          ? data
+
+          : data.filter(
+              p=>
+              p.category === value
+            );
+
+
+        render(
+          result,
+          gridId,
+          type
+        );
+
+      }
+    );
+
+  });
+}
+
+
+setupFilters(
+  "clothesFilters",
+  clothes,
+  "clothesGrid",
+  "clothes"
+);
+
+
+setupFilters(
+  "accessoryFilters",
+  accessories,
+  "accessoriesGrid",
+  "accessory"
+);
+
+
+/* =====================================================
+   SEARCH
+===================================================== */
+
+const search =
+  document.getElementById(
+    "clothesSearch"
+  );
+
+
+search.addEventListener(
+  "input",
+  e=>{
+
+    const q =
+      e.target.value
+        .trim()
+        .toLowerCase();
+
+
+    const result =
+      clothes.filter(
+        p=>
+        (
+          p.name+
+          " "+
+          p.category+
+          " "+
+          p.desc
+        )
+        .toLowerCase()
+        .includes(q)
+      );
+
+
+    render(
+      result,
+      "clothesGrid",
+      "clothes"
+    );
+
+  }
+);
+
+</script>
+
+</body>
+</html>
