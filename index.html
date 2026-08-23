@@ -1,21 +1,292 @@
+/* =========================
+   HERO - DESKTOP + MOBILE
+========================= */
+
 .hero{
   min-height:650px;
-  display:grid;
-  place-items:center;
+  width:100%;
+  max-width:100%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
   text-align:center;
   padding:80px 20px;
   position:relative;
   overflow:hidden;
 
-  background-image:
+  background:
     linear-gradient(
       90deg,
       rgba(38,6,25,.82),
-      rgba(65,10,39,.45),
-      rgba(38,6,25,.75)
+      rgba(65,10,39,.48),
+      rgba(38,6,25,.78)
     ),
-    url("https://images.unsplash.com/photo-1609357605129-26f69add5d6e?auto=format&fit=crop&w=1800&q=85");
+    url("YOUR-BANNER-IMAGE.jpg");
 
   background-size:cover;
+  background-repeat:no-repeat;
   background-position:center center;
+}
+
+.hero-content{
+  position:relative;
+  z-index:2;
+  width:100%;
+  max-width:900px;
+  margin:auto;
+  color:#fff;
+}
+
+.hero h1{
+  font-size:clamp(42px,7vw,82px);
+  color:#fff;
+  line-height:1.1;
+  margin-bottom:8px;
+  text-shadow:0 4px 20px rgba(0,0,0,.7);
+}
+
+.latin{
+  font-family:Georgia,serif;
+  font-size:clamp(22px,3vw,31px);
+  color:#f0d58c;
+  letter-spacing:2px;
+  margin-bottom:15px;
+}
+
+.hero p{
+  font-size:clamp(17px,2.5vw,25px);
+  font-weight:700;
+  margin-bottom:15px;
+}
+
+.address{
+  font-size:14px;
+  color:#f8e7bd;
+  margin-bottom:28px;
+}
+
+.buttons{
+  width:100%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:12px;
+}
+
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  padding:13px 24px;
+  border-radius:30px;
+  font-weight:800;
+  max-width:100%;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media screen and (max-width:700px){
+
+  html,
+  body{
+    width:100%;
+    max-width:100%;
+    overflow-x:hidden;
+  }
+
+  nav{
+    width:100%;
+    padding:10px 15px;
+  }
+
+  nav .links{
+    display:none;
+  }
+
+  .brand{
+    font-size:18px;
+  }
+
+  .topbar{
+    width:100%;
+    padding:8px 10px;
+    display:flex;
+    flex-direction:column;
+    text-align:center;
+    gap:3px;
+    font-size:10px;
+  }
+
+  /* البانر في الهاتف */
+
+  .hero{
+    width:100%;
+    min-height:560px;
+    padding:55px 18px;
+
+    background-size:cover;
+
+    /*
+      تغيير موضع الصورة على الهاتف
+      حتى تبقى المرأة ظاهرة بشكل جيد
+    */
+    background-position:center center;
+  }
+
+  .hero-content{
+    width:100%;
+    max-width:100%;
+    padding:0;
+  }
+
+  .logo-icon{
+    font-size:42px;
+  }
+
+  .hero h1{
+    font-size:46px;
+    line-height:1.15;
+  }
+
+  .latin{
+    font-size:23px;
+    letter-spacing:1px;
+  }
+
+  .hero p{
+    font-size:17px;
+    line-height:1.7;
+  }
+
+  .address{
+    font-size:12px;
+    line-height:1.8;
+  }
+
+  .buttons{
+    width:100%;
+    flex-direction:column;
+    gap:10px;
+  }
+
+  .btn{
+    width:100%;
+    max-width:320px;
+    padding:13px 18px;
+  }
+
+  section{
+    width:100%;
+    max-width:100%;
+    padding:45px 15px;
+    overflow:hidden;
+  }
+
+  .section-title{
+    font-size:27px;
+    line-height:1.4;
+  }
+
+  .section-sub{
+    font-size:13px;
+    line-height:1.8;
+  }
+
+  .filters{
+    width:100%;
+    overflow-x:auto;
+    justify-content:flex-start;
+    flex-wrap:nowrap;
+    padding:5px 2px 12px;
+    scrollbar-width:none;
+  }
+
+  .filters::-webkit-scrollbar{
+    display:none;
+  }
+
+  .filter{
+    flex:0 0 auto;
+    white-space:nowrap;
+  }
+
+  .search{
+    width:100%;
+    max-width:100%;
+  }
+
+  .grid{
+    width:100%;
+    display:grid;
+    grid-template-columns:1fr;
+    gap:18px;
+  }
+
+  .card{
+    width:100%;
+    max-width:100%;
+  }
+
+  .product-img{
+    width:100%;
+    height:330px;
+  }
+
+  .product-img img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+  }
+
+  .card-body{
+    padding:15px;
+  }
+
+  .info{
+    width:100%;
+    padding:25px 18px;
+    grid-template-columns:1fr;
+    border-radius:20px;
+  }
+
+  footer{
+    width:100%;
+    padding:35px 15px;
+  }
+
+}
+
+
+/* =========================
+   شاشات صغيرة جدًا
+========================= */
+
+@media screen and (max-width:380px){
+
+  .hero{
+    min-height:530px;
+    padding:45px 14px;
+  }
+
+  .hero h1{
+    font-size:40px;
+  }
+
+  .latin{
+    font-size:20px;
+  }
+
+  .hero p{
+    font-size:15px;
+  }
+
+  .product-img{
+    height:300px;
+  }
+
 }
